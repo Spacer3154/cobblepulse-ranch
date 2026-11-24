@@ -263,7 +263,7 @@ public final class SelfTest {
         hold(dittoIncense, "cobblepulse_ranch:sea_incense");
         check("encens_porte_par_le_pere", Genetics.baseOffspring(mon("azumarill gender=female"), dittoIncense, r).getSpecies().getName().equalsIgnoreCase("azurill"), null);
         Set<String> nido = new HashSet<>();
-        for (int i = 0; i < 200; i++) nido.add(Genetics.baseOffspring(mon("nidoranf gender=female"), ditto, r).getSpecies().getName().toLowerCase());
+        for (int i = 0; i < 200; i++) nido.add(Genetics.key(Genetics.baseOffspring(mon("nidoranf gender=female"), ditto, r).getSpecies().getName()));
         check("nidoran_deux_especes", nido.contains("nidoranf") && nido.contains("nidoranm"), nido.toString());
         Pokemon pichuBaby = mon("raichu gender=female");
         String pichu = Genetics.baseOffspring(pichuBaby, ditto, r).getSpecies().getName();

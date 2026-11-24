@@ -179,7 +179,7 @@ final class LiveTest {
             String me = mc.player.getGameProfile().getName();
             cmd(mc, "cobbleranch selftest pc " + me + " eevee gender=female level=20");
             cmd(mc, "cobbleranch selftest pc " + me + " ditto level=30");
-            cmd(mc, "cobbleranch selftest pc " + me + " pikachu gender=male level=12");
+            cmd(mc, "cobbleranch selftest pc " + me + " geodude gender=male level=12");
             cmd(mc, "cobbleranch selftest pc " + me + " mewtwo level=70");
         });
         until("pc_rempli", 600, mc -> chatHas("PC : Mewtwo"));
@@ -222,9 +222,9 @@ final class LiveTest {
         add(30, mc -> {
             PickerScreen p = mc.screen instanceof PickerScreen ps ? ps : null;
             if (p != null) {
-                boolean pikaRefused = false;
-                for (JsonObject e : RanchUi.arr(p.data, "entries")) if (RanchUi.str(e, "species").endsWith("pikachu")) pikaRefused = !RanchUi.bool(e, "ok");
-                check("incompatible_grise", pikaRefused, null);
+                boolean geoRefused = false;
+                for (JsonObject e : RanchUi.arr(p.data, "entries")) if (RanchUi.str(e, "species").endsWith("geodude")) geoRefused = !RanchUi.bool(e, "ok");
+                check("incompatible_grise", geoRefused, null);
                 for (JsonObject e : RanchUi.arr(p.data, "entries")) if (RanchUi.str(e, "species").endsWith("ditto")) {
                     p.choose(e);
                     break;
@@ -286,7 +286,12 @@ final class LiveTest {
         add(20, mc -> {
             mc.setScreen(null);
             int e = find(mc, ModContent.POKEMON_EGG);
-            if (e >= 0 && e < 9) mc.player.getInventory().selected = e;
+            if (e >= 0 && e < 9) {
+                mc.player.getInventory().selected = e;
+                mc.player.connection.send(new net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket(e));
+            }
+        });
+        add(20, mc -> {
             CHAT.clear();
             cmd(mc, "eggsee");
         });

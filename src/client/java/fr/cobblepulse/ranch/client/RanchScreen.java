@@ -138,7 +138,9 @@ public final class RanchScreen extends RanchUi {
             case "À DISTANCE" -> MUTED;
             default -> ERROR;
         };
-        String cond = bool(data, "remote") ? "Conditions : à distance (durée fixe)" : "Conditions 5x5 : " + rating + (score >= 0 ? " (" + score + "/" + num(data, "optimal") + ")" : "");
+        String cond = bool(data, "remote") ? "Conditions : à distance (durée fixe)" : a == null && b == null ? "Conditions 5x5 : —"
+                : "Conditions 5x5 : " + rating + (score >= 0 ? " (" + score + "/" + num(data, "optimal") + ")" : "");
+        if (a == null && b == null) ratingColor = MUTED;
         g.drawString(font, font.plainSubstrByWidth(cond, rw), rx, y + 27, ratingColor, false);
         List<Component> ht = new ArrayList<>();
         ht.add(Component.literal("Habitat 5x5 (couches Y et Y+1)" + (str(s, "group").isEmpty() ? "" : " — groupe " + str(s, "group"))).withStyle(ChatFormatting.GOLD));
