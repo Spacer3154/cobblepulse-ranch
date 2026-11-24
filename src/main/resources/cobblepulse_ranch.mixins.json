@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fr.cobblepulse.ranch.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PlayerListInvoker"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

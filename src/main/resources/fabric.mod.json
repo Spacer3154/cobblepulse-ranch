@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblepulse_ranch",
+  "version": "${version}",
+  "name": "CobblePulse Ranch",
+  "description": "Pension et reproduction des Pokémon pour Cobble Pulse : Bloc de pension (3 emplacements, habitat 5x5, calcul par horodatage sans tick), génétique complète, œufs transparents au GTS, sabliers, castration, commandes /daycare /breed /hatch /eggsee et panneau d'administration.",
+  "authors": ["CobblePulse"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/cobblepulse_ranch/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["fr.cobblepulse.ranch.CobbleRanch"],
+    "client": ["fr.cobblepulse.ranch.client.RanchClient"],
+    "cobblepulse:pokemon_lines": ["fr.cobblepulse.ranch.compat.UtilsPokemonLines"],
+    "cobblepulse:item_lines": ["fr.cobblepulse.ranch.compat.UtilsItemLines"]
+  },
+  "mixins": ["cobblepulse_ranch.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*",
+    "cobblemon": ">=1.8.0"
+  },
+  "recommends": {
+    "luckperms": "*",
+    "cobblepulse_utils": "*"
+  },
+  "conflicts": {
+    "cobbreeding": "*",
+    "daycareplus": "*"
+  }
+}

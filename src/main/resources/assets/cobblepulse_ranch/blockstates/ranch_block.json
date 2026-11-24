@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "cobblepulse_ranch:block/ranch_block"
+    },
+    "facing=west": {
+      "model": "cobblepulse_ranch:block/ranch_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cobblepulse_ranch:block/ranch_block",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "cobblepulse_ranch:block/ranch_block",
+      "y": 270
+    }
+  }
+}

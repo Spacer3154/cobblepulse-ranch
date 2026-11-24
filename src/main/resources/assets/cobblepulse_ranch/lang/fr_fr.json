@@ -1,0 +1,16 @@
+{
+  "block.cobblepulse_ranch.ranch_block": "Bloc de Pension",
+  "item.cobblepulse_ranch.pokemon_egg": "Œuf de Pokémon",
+  "item.cobblepulse_ranch.silver_hourglass": "Sablier d'Argent",
+  "item.cobblepulse_ranch.gold_hourglass": "Sablier d'Or",
+  "item.cobblepulse_ranch.sea_incense": "Encens Mer",
+  "item.cobblepulse_ranch.lax_incense": "Encens Doux",
+  "item.cobblepulse_ranch.rose_incense": "Encens Fleur",
+  "item.cobblepulse_ranch.pure_incense": "Encens Pur",
+  "item.cobblepulse_ranch.rock_incense": "Encens Roc",
+  "item.cobblepulse_ranch.odd_incense": "Encens Bizarre",
+  "item.cobblepulse_ranch.luck_incense": "Encens Veine",
+  "item.cobblepulse_ranch.full_incense": "Encens Plein",
+  "item.cobblepulse_ranch.wave_incense": "Encens Vague",
+  "itemGroup.cobblepulse_ranch.main": "CobblePulse Ranch"
+}

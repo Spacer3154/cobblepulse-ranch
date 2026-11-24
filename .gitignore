@@ -1,0 +1,10 @@
+.gradle/
+build/
+out/
+run/
+run-server/
+run-client/
+*.iml
+.idea/
+deps/
+ci/mods/
