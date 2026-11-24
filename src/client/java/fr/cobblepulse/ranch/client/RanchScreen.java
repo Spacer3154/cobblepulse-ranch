@@ -214,6 +214,7 @@ public final class RanchScreen extends RanchUi {
         if (!held.isEmpty()) t.add(Component.literal("Tient : " + str(p, "held_name") + (str(p, "held_effect").isEmpty() ? "" : " — " + str(p, "held_effect")))
                 .withStyle(str(p, "held_effect").isEmpty() ? ChatFormatting.GRAY : ChatFormatting.AQUA));
         if (bool(data, "fertility_on")) t.add(Component.literal("Fertilité : " + num(p, "fertility") + "/" + num(p, "fertility_max")).withStyle(ChatFormatting.GRAY));
+        if (bool(p, "neutered")) t.add(Component.literal("✂ Castré").withStyle(ChatFormatting.RED));
         tip(tx, y, w - 54 - 118, 14, t);
         btn(g, "pick:" + idx + ":" + label, x + w - 118, y, 58, 16, "Changer", !orphan, mx, my, () -> send("ranch_pick", idx, first, null, null));
         btn(g, "take:" + idx + ":" + label, x + w - 58, y, 58, 16, "Retirer", true, mx, my, () -> send("ranch_withdraw", idx, first, null, null));

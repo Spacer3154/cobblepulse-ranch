@@ -170,6 +170,8 @@ public final class SelfTest {
         fail = 0;
         QUEUE.clear();
         QUEUE.add(SelfTest::content);
+        QUEUE.add(SelfTest::fertilityOff);
+        QUEUE.add(() -> ConfigManager.get().general_settings.enable_fertility_system = true);
         QUEUE.add(SelfTest::compatibility);
         QUEUE.add(SelfTest::species);
         QUEUE.add(SelfTest::forms);
@@ -177,6 +179,7 @@ public final class SelfTest {
         QUEUE.add(SelfTest::modsAndDatapacks);
         QUEUE.add(SelfTest::habitat);
         QUEUE.add(SelfTest::lazyEvaluation);
+        QUEUE.add(() -> ConfigManager.get().general_settings.enable_fertility_system = false);
         QUEUE.add(SelfTest::persistenceAndAntiDup);
         QUEUE.add(SelfTest::journal);
         QUEUE.add(SelfTest::eggData);
@@ -213,6 +216,34 @@ public final class SelfTest {
                 && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse("cobblemon:power_weight")), null);
         var fl = net.fabricmc.fabric.api.registry.FlammableBlockRegistry.getDefaultInstance().get(ModContent.RANCH_BLOCK);
         check("ininflammable", !st.ignitedByLava() && (fl == null || fl.getBurnChance() == 0 && fl.getSpreadChance() == 0), fl == null ? "" : fl.getBurnChance() + "/" + fl.getSpreadChance());
+    }
+
+    /** Fertilite desactivee par defaut : aucune limite de pontes, aucune donnee ecrite sur les Pokemon. */
+    static void fertilityOff() {
+        check("fertilite_desactivee_par_defaut", !ConfigManager.get().general_settings.enable_fertility_system && !Traits.fertilityEnabled(), null);
+        Pokemon s = mon("eevee gender=female");
+        Traits.setFertility(s, 0);
+        check("fertilite_ignoree", pair(s, mon("eevee gender=male")).ok(), pair(s, mon("eevee gender=male")).reason());
+        RanchData r = RanchData.create(FAKE, "Testeur", true, 3);
+        RanchStore.add(r);
+        SlotData sl = r.slot(0);
+        Pokemon a = mon("eevee gender=female"), b = mon("eevee gender=male");
+        sl.set(true, a);
+        sl.set(false, b);
+        long now = System.currentTimeMillis();
+        RanchService.evaluate(r, now);
+        int eggs = 0;
+        for (int i = 0; i < 12; i++) {
+            sl.start = now - sl.duration - 1;
+            RanchService.evaluate(r, now);
+            eggs += sl.eggs.size();
+            sl.eggs.clear();
+        }
+        Pokemon pa = sl.pokemon(true);
+        check("pontes_illimitees", eggs == 12 && !sl.pause.contains("fertile"), eggs + " oeufs, pause '" + sl.pause + "'");
+        check("aucune_donnee_de_fertilite", !pa.getPersistentData().contains(Traits.KEY) || !pa.getPersistentData().getCompound(Traits.KEY).contains("fertility"),
+                pa.getPersistentData().toString());
+        RanchStore.remove(r);
     }
 
     static void compatibility() {
@@ -722,7 +753,7 @@ public final class SelfTest {
         check("castration_persistante", Traits.neutered(reload) && Traits.neuteredTag(nbt), null);
         List<String> lines = new UtilsPokemonLines().apply(reload);
         check("castration_visible_gts", !lines.isEmpty() && lines.get(0).contains("Castré"), lines.toString());
-        check("fertilite_visible_gts", new UtilsPokemonLines().apply(mon("eevee")).get(0).contains("Fertilité"), null);
+        check("fertilite_absente_gts", new UtilsPokemonLines().apply(mon("eevee")).isEmpty(), null);
         utilsIntegration(reload);
     }
 

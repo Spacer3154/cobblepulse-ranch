@@ -26,7 +26,8 @@ public final class RanchConfig {
         /** ajout : limite par dresseur (-1 = aucune). */
         public int max_ranch_blocks_per_player = -1;
         public int slots_per_ranch_block = 3;
-        public boolean enable_fertility_system = true;
+        /** desactivee par defaut (choix de Spacer : nuit a la reproduction competitive). */
+        public boolean enable_fertility_system = false;
         public int default_fertility_uses = 5;
         public boolean allow_ditto_x_ditto = false;
         /** ajout : oeufs gardes par emplacement avant que la ponte se mette en pause. */

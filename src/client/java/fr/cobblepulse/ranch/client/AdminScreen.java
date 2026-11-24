@@ -115,15 +115,16 @@ public final class AdminScreen extends RanchUi {
                 long start = lng(e, "start"), dur = lng(e, "duration");
                 String t = start > 0 ? "Temps restant : " + time(start + dur - now) : str(e, "pause").isEmpty() ? "inactif" : str(e, "pause");
                 String line = str(e, "parents") + " | " + t + (num(e, "eggs") > 0 ? " | œufs : " + num(e, "eggs") : "")
-                        + (num(e, "fertility") >= 0 ? " | fertilité " + num(e, "fertility") : "");
+                        + (bool(data, "fertility_on") && num(e, "fertility") >= 0 ? " | fertilité " + num(e, "fertility") : "");
                 g.drawString(font, font.plainSubstrByWidth(line, pw - 330), px + 18, y + 17, MUTED, false);
                 String r = str(e, "ranch");
                 int s = num(e, "slot");
                 int bx = px + pw - 312;
                 if (perm("modify")) {
                     btn(g, "force:" + r + ":" + s, bx, y + 14, 66, 14, "Forcer ponte", true, mx, my, () -> act("force", r, s, null));
-                    btn(g, "fert:" + r + ":" + s, bx + 68, y + 14, 56, 14, "Fertilité…", true, mx, my, () -> minecraft.setScreen(new InputScreen(this,
-                            "Fertilité des deux parents", "Nouvelle valeur (0 = stérile)", v -> act("fertility", r, s, v))));
+                    if (bool(data, "fertility_on"))
+                        btn(g, "fert:" + r + ":" + s, bx + 68, y + 14, 56, 14, "Fertilité…", true, mx, my, () -> minecraft.setScreen(new InputScreen(this,
+                                "Fertilité des deux parents", "Nouvelle valeur (0 = stérile)", v -> act("fertility", r, s, v))));
                     btn(g, "time:" + r + ":" + s, bx + 126, y + 14, 48, 14, "Temps…", start > 0, mx, my, () -> minecraft.setScreen(new InputScreen(this,
                             "Temps restant avant la ponte", "Minutes", v -> act("time", r, s, v))));
                 }

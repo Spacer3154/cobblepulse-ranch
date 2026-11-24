@@ -63,6 +63,7 @@ public final class AdminService {
         }
         o.add("perms", perms);
         o.addProperty("ditto", Compatibility.dittoXDittoAllowed());
+        o.addProperty("fertility_on", fr.cobblepulse.ranch.breeding.Traits.fertilityEnabled());
         o.addProperty("ditto_override", WorldState.dittoOverride() == null ? "" : String.valueOf(WorldState.dittoOverride()));
         JsonArray list = new JsonArray();
         int total = 0;
@@ -151,6 +152,10 @@ public final class AdminService {
             }
             case "fertility" -> {
                 if (!require(p, Perms.ADMIN_MODIFY, act) || r == null) break;
+                if (!fr.cobblepulse.ranch.breeding.Traits.fertilityEnabled()) {
+                    msg = "Le système de fertilité est désactivé (config.json)";
+                    break;
+                }
                 int v = Math.max(0, Math.min(999, a.get("value").getAsInt()));
                 String e = RanchService.setFertility(r, slot, v);
                 msg = e == null ? "Fertilité réglée à " + v : "Refusé : " + e;

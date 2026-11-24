@@ -164,6 +164,7 @@ public final class Views {
         Pokemon other = s == null ? null : s.pokemon(!first);
         if (other != null) o.add("other", pokemon(other, p.getUUID()));
         boolean bypass = Perms.has(p, Perms.BYPASS_FERTILITY);
+        o.addProperty("fertility_on", Traits.fertilityEnabled());
         JsonArray list = new JsonArray();
         if (r.remote) {
             int i = 0;

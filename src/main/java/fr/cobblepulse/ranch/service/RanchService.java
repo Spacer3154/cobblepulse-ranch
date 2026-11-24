@@ -432,7 +432,7 @@ public final class RanchService {
             Journal.end(tx);
             return "Retrait du PC impossible";
         }
-        if (!pk.getPersistentData().contains(Traits.KEY) || !pk.getPersistentData().getCompound(Traits.KEY).contains("fertility"))
+        if (Traits.fertilityEnabled() && (!pk.getPersistentData().contains(Traits.KEY) || !pk.getPersistentData().getCompound(Traits.KEY).contains("fertility")))
             Traits.setFertility(pk, Traits.fertility(pk));
         s.set(first, pk);
         s.start = 0;

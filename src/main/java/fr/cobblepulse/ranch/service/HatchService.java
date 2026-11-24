@@ -131,7 +131,7 @@ public final class HatchService {
         }
         pk.setOriginalTrainer(p.getUUID());
         pk.setOriginalTrainerName(p.getGameProfile().getName());
-        Traits.setFertility(pk, Traits.maxFertility());
+        if (Traits.fertilityEnabled()) Traits.setFertility(pk, Traits.maxFertility());
         CompoundTag dest = Journal.where("PARTY");
         UUID tx = Journal.begin("HATCH", p.getUUID(), eggId, egg.copy(), Journal.where("INVENTORY"), dest);
         WorldState.recordHatch(eggId, pk.getUuid(), p.getUUID(), false);

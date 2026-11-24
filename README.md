@@ -7,7 +7,7 @@ Pension et reproduction des Pokémon pour Cobble Pulse (Minecraft 1.21.1, Fabric
 - **Aucun ticker** : chaque emplacement garde `timestamp_start` et `duration_ms`. L'avancement est calculé seulement à l'ouverture, au dépôt ou au retrait, à l'utilisation d'un sablier, sur une commande ou sur une demande de rafraîchissement de l'écran.
 - **Aucune entité** : les parents sont stockés en NBT Cobblemon dans la pension.
 - Ni waterloggable ni inflammable. Insensible aux explosions, au Wither, au dragon et aux pistons ; l'eau et la lave ne le cassent pas. Seul son propriétaire (ou le staff) peut le casser, et tout ce qu'il contient lui est rendu. Limite par chunk et par dresseur réglable (aucune par défaut).
-- Écran : 3 emplacements. Chacun montre les parents choisis **dans le PC** (ils quittent le PC pendant leur séjour), leurs objets tenus et leur effet, la fertilité, la progression avec le compte à rebours, les conditions 5x5 (détail au survol), les œufs à récupérer et les boutons Sablier d'Argent et d'Or. Il y a aussi un Guide : la mécanique, puis les blocs et leurs points par groupe d'œufs.
+- Écran : 3 emplacements. Chacun montre les parents choisis **dans le PC** (ils quittent le PC pendant leur séjour), leurs objets tenus et leur effet, la progression avec le compte à rebours, les conditions 5x5 (détail au survol), les œufs à récupérer et les boutons Sablier d'Argent et d'Or. Il y a aussi un Guide : la mécanique, puis les blocs et leurs points par groupe d'œufs.
 - Recette : œuf, 2 bottes de foin, bloc de Pâture de Cobblemon, lingot de fer.
 
 ## Habitat 5x5
@@ -15,14 +15,14 @@ Pension et reproduction des Pokémon pour Cobble Pulse (Minecraft 1.21.1, Fabric
 
 ## Génétique
 Données lues dans Cobblemon au démarrage : espèces officielles, de mods, de datapacks et Fakémons (CobblePulse-Ecology).
-- Compatibilité : un groupe d'œufs commun et des sexes opposés, ou Métamorph (jamais avec le groupe Inconnu). Métamorph x Métamorph est interdit par défaut et peut être autorisé en direct par le staff. Un Pokémon castré ou stérile ne se reproduit pas.
+- Compatibilité : un groupe d'œufs commun et des sexes opposés, ou Métamorph (jamais avec le groupe Inconnu). Métamorph x Métamorph est interdit par défaut et peut être autorisé en direct par le staff. Un Pokémon castré ne se reproduit pas.
 - Espèce : premier stade de la lignée de la mère (ou du parent non-Métamorph). Les bébés à encens ne naissent que si un parent tient l'encens, sinon c'est le stade suivant ; les 9 encens sont ajoutés par le mod (table réglable). Nidoran ♀/♂, Muciole/Lumivole et Manaphy → Phione sont gérés.
 - **Formes régionales** : si les deux parents ont la même forme régionale, l'œuf l'a toujours. Si les formes ou les espèces diffèrent (Métamorph compris), la forme de la mère passe avec 30 % de chances. La Pierre Stase garantit la forme de son porteur. Les formes Méga, Gigamax et de combat ne passent jamais.
 - IV : 3 hérités (5 avec un Nœud Destin), un objet Pouvoir garantit sa statistique (si les deux parents en tiennent, un des deux au hasard). Nature : la Pierre Stase la garantit (deux porteurs : 50/50).
 - Talent : 30 % de chances d'avoir le talent exact de la mère, talent caché compris. Sans talent caché chez la mère, jamais de talent caché.
 - Ball de la mère (Master Ball et Mémoire Ball deviennent une Poké Ball), capacités œuf connues d'un parent, Herbe Miroir (le porteur apprend les capacités œuf que connaît son partenaire).
 - Chromatique : 1/8192, ×6 avec la méthode Masuda (Dresseurs d'Origine de langues différentes).
-- Fertilité : 5 pontes par Pokémon. Elle suit le Pokémon (PC, échanges, GTS).
+- Fertilité : **désactivée** (choix de Spacer, elle nuit à la reproduction compétitive) : aucune limite de pontes, aucune donnée écrite sur les Pokémon. Réactivable avec `enable_fertility_system` (5 pontes par Pokémon, suit le Pokémon).
 
 ## Œufs, sabliers, drops
 - L'œuf est un objet. Toute sa génétique est figée à la ponte (aucun nouveau tirage au GTS ni à l'éclosion). Il éclot en marchant, avec ×2 si un Pokémon à Corps Ardent, Armumagma ou Turbine est dans l'équipe. L'infobulle donne l'espèce, la progression et le statut ; avec Maj, la fiche complète. L'œuf brille s'il est chromatique.
@@ -31,7 +31,7 @@ Données lues dans Cobblemon au démarrage : espèces officielles, de mods, de d
 - **Castration** : `/castrer <emplacement>` puis `/castrer <emplacement> confirmer`, réservée au Dresseur d'Origine, définitive. Le Pokémon ne se reproduit plus et la mention « Castré » apparaît au GTS.
 
 ## GTS (CobblePulse Utils)
-Utils lit deux points d'entrée du mod, sans dépendance de compilation : `cobblepulse:pokemon_lines` (Castré, Fertilité sur la fiche des Pokémon : GTS, STS, Échange Miracle) et `cobblepulse:item_lines` (fiche GTS complète d'un œuf : espèce, talent, chromatique, nature, Ball, IV, capacités œuf, pas restants).
+Utils lit deux points d'entrée du mod, sans dépendance de compilation : `cobblepulse:pokemon_lines` (« Castré » sur la fiche des Pokémon : GTS, STS, Échange Miracle ; la fertilité aussi si elle est activée) et `cobblepulse:item_lines` (fiche GTS complète d'un œuf : espèce, talent, chromatique, nature, Ball, IV, capacités œuf, pas restants).
 
 ## Sécurité des données
 - Registre central : un fichier par pension dans `world/cobbleranch/data/ranches/`, écrit de façon atomique, plus une copie dans le NBT du bloc. Si le fichier est perdu, la copie du bloc le restaure.

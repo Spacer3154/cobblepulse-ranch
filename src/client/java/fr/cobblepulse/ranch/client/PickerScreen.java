@@ -101,7 +101,7 @@ public final class PickerScreen extends RanchUi {
                 right = "✖ " + str(e, "reason");
                 rc = ERROR;
             } else {
-                right = "✔ Compatible" + (bool(data, "fertility_on") || num(e, "fertility_max") > 0 ? "  Fert. " + num(e, "fertility") + "/" + num(e, "fertility_max") : "");
+                right = "✔ Compatible" + (bool(data, "fertility_on") ? "  Fert. " + num(e, "fertility") + "/" + num(e, "fertility_max") : "");
                 rc = OK;
             }
             g.drawString(font, font.plainSubstrByWidth(right, pw - 270), px + 254, y + 7, rc, false);

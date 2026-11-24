@@ -72,7 +72,8 @@ public final class GuideScreen extends RanchUi {
                 + "reproduction continue toute seule, même si tu es loin ou déconnecté."});
         p.add(new String[]{"Compatibilité", "Un mâle et une femelle qui partagent un groupe d'œufs, ou n'importe quel Pokémon avec Métamorph (sauf le "
                 + "groupe Inconnu : légendaires, fabuleux, bébés, paradoxes). Métamorph x Métamorph : " + (bool(data, "ditto_ditto") ? "autorisé en ce moment." : "interdit.")
-                + " Un Pokémon castré ne se reproduit plus jamais (/castrer, réservé au Dresseur d'Origine)."});
+                + " Un Pokémon castré ne se reproduit plus jamais (/castrer, réservé au Dresseur d'Origine)."
+                + (bool(data, "fertility_on") ? "" : " Pas de limite de pontes : un couple peut se reproduire autant que tu veux.")});
         if (bool(data, "fertility_on")) p.add(new String[]{"Fertilité", "Chaque Pokémon peut donner " + num(data, "fertility") + " œufs. Chaque ponte retire 1 "
                 + "point aux deux parents ; à 0, il est stérile. La fertilité suit le Pokémon (PC, échanges, GTS)."});
         p.add(new String[]{"Durée et habitat 5x5", "Un cycle dure de " + time(num(data, "base") * 1000L) + " (0 point) à " + time(num(data, "min") * 1000L)
