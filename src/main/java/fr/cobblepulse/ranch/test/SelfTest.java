@@ -211,7 +211,8 @@ public final class SelfTest {
         check("objets_cobblemon", BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse(Traits.DESTINY_KNOT))
                 && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse(Traits.EVERSTONE)) && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse(Traits.MIRROR_HERB))
                 && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse("cobblemon:power_weight")), null);
-        check("ininflammable", !st.ignitedByLava() && net.fabricmc.fabric.api.registry.FlammableBlockRegistry.getDefaultInstance().get(ModContent.RANCH_BLOCK) == null, null);
+        var fl = net.fabricmc.fabric.api.registry.FlammableBlockRegistry.getDefaultInstance().get(ModContent.RANCH_BLOCK);
+        check("ininflammable", !st.ignitedByLava() && (fl == null || fl.getBurnChance() == 0 && fl.getSpreadChance() == 0), fl == null ? "" : fl.getBurnChance() + "/" + fl.getSpreadChance());
     }
 
     static void compatibility() {
@@ -317,7 +318,9 @@ public final class SelfTest {
         check("pierre_stase_forme_garantie", stone == 60, stone + "/60");
         // forme absente chez le bebe : forme normale (Raichu d'Alola -> Pichu)
         Genetics.Result pr = Genetics.breed(pair(withForm(mon("raichu gender=female"), "Alola"), withForm(mon("raichu gender=male"), "Alola")), r);
-        check("forme_absente_chez_bebe", pr.child().getForm() == pr.child().getSpecies().getStandardForm(), pr.child().getSpecies().getName() + " " + pr.child().getForm().getName());
+        String pf = pr.child().getForm().getName().toLowerCase();
+        check("bebe_lignee_regionale", pr.child().getSpecies().getName().equalsIgnoreCase("pichu")
+                && (pr.child().getForm() == pr.child().getSpecies().getStandardForm() || pf.contains("bias")), pr.child().getSpecies().getName() + " " + pf);
         // Mega / forme de combat jamais heritee
         check("mots_cles_formes", Genetics.regionalKey(mon("charizard").getSpecies().getStandardForm()).isEmpty(), null);
     }
@@ -563,6 +566,8 @@ public final class SelfTest {
         check("ponte_forcee", RanchService.forceLay(r, 0) != null || s.eggs.size() >= 1, null);
         // modification des parents : nouveau cycle
         s.eggs.clear();
+        Traits.setFertility(s.pokemon(true), 5);
+        s.refresh(true);
         s.set(false, mon("ditto"));
         s.start = 0;
         RanchService.evaluate(r, now);
@@ -665,8 +670,11 @@ public final class SelfTest {
     }
 
     static void eggData() {
-        Genetics.Result res = Genetics.breed(pair(mon("riolu gender=female"), mon("ditto")), new Random(5));
-        CompoundTag egg = EggData.build(res.child(), res, "Riolu ♀ x Métamorph");
+        Compatibility.Check lc = pair(mon("lucario gender=female"), mon("ditto"));
+        check("lucario_metamorph", lc.ok(), lc.reason());
+        Genetics.Result res = Genetics.breed(lc, new Random(5));
+        check("lucario_donne_riolu", res.child().getSpecies().getName().equalsIgnoreCase("riolu"), res.child().getSpecies().getName());
+        CompoundTag egg = EggData.build(res.child(), res, "Lucario ♀ x Métamorph");
         ItemStack st = EggData.toStack(egg);
         check("objet_oeuf", EggData.of(st) != null && EggData.id(EggData.of(st)).equals(EggData.id(egg)), null);
         ItemStack copy = st.copy();
@@ -715,6 +723,29 @@ public final class SelfTest {
         List<String> lines = new UtilsPokemonLines().apply(reload);
         check("castration_visible_gts", !lines.isEmpty() && lines.get(0).contains("Castré"), lines.toString());
         check("fertilite_visible_gts", new UtilsPokemonLines().apply(mon("eevee")).get(0).contains("Fertilité"), null);
+        utilsIntegration(reload);
+    }
+
+    /** Avec CobblePulse Utils installe : sa fiche de Pokemon (GTS) affiche la castration, et la fiche d'un oeuf est fournie. */
+    static void utilsIntegration(Pokemon neutered) {
+        if (!net.fabricmc.loader.api.FabricLoader.getInstance().isModLoaded("cobblepulse_utils")) {
+            check("utils_gts", true, "CobblePulse Utils absent : test ignore");
+            return;
+        }
+        try {
+            Class<?> ext = Class.forName("fr.cobblepulse.utils.core.Extensions");
+            @SuppressWarnings("unchecked")
+            List<String> lines = (List<String>) Class.forName("fr.cobblepulse.utils.pokemon.PokemonText").getMethod("lines", Pokemon.class).invoke(null, neutered);
+            check("utils_gts_castre", String.join("\n", lines).contains("Castré"), lines.toString());
+            Genetics.Result res = Genetics.breed(pair(mon("eevee gender=female"), mon("ditto")), new Random(9));
+            @SuppressWarnings("unchecked")
+            List<String> sheet = (List<String>) ext.getMethod("itemLines", ItemStack.class).invoke(null, EggData.toStack(EggData.build(res.child(), res, "test")));
+            check("utils_gts_fiche_oeuf", String.join("\n", sheet).contains("FICHE GTS"), sheet.size() + " lignes");
+        } catch (ClassNotFoundException e) {
+            check("utils_gts", true, "CobblePulse Utils sans extensions (version precedente) : test ignore");
+        } catch (Throwable t) {
+            check("utils_gts", false, t.toString());
+        }
     }
 
     static void performance() {

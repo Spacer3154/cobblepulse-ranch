@@ -39,11 +39,8 @@ public final class Compatibility {
         Set<EggGroup> g = Traits.eggGroups(p);
         if (g.isEmpty() || g.contains(EggGroup.UNDISCOVERED)) return Names.species(p.getSpecies()) + " est du groupe Inconnu : il ne peut pas se reproduire";
         RanchConfig.Genetics gen = ConfigManager.get().genetics;
-        String name = p.getSpecies().getName().toLowerCase(Locale.ROOT);
-        String id = p.getSpecies().getResourceIdentifier().toString();
         for (String s : gen.blocked_species) {
-            String b = s.toLowerCase(Locale.ROOT);
-            if (b.equals(name) || b.equals(id)) return Names.species(p.getSpecies()) + " ne peut pas se reproduire sur ce serveur";
+            if (Genetics.matches(p.getSpecies(), s)) return Names.species(p.getSpecies()) + " ne peut pas se reproduire sur ce serveur";
         }
         for (String l : gen.blocked_labels) {
             if (p.getSpecies().getLabels().contains(l.toLowerCase(Locale.ROOT)))

@@ -85,8 +85,11 @@ public final class Habitat {
                 return new Matcher(null, null, null);
             }
             Block b = BuiltInRegistries.BLOCK.get(rl);
-            FluidState fs = b.defaultBlockState().getFluidState();
-            if (!fs.isEmpty() && fs.getType() != Fluids.EMPTY) return new Matcher(null, null, fs.getType());
+            // eau, lave, fluides de mods : sources seulement (le varech et l'herbe aquatique contiennent de l'eau, ce sont des blocs)
+            if (b instanceof net.minecraft.world.level.block.LiquidBlock) {
+                FluidState fs = b.defaultBlockState().getFluidState();
+                if (!fs.isEmpty() && fs.getType() != Fluids.EMPTY) return new Matcher(null, null, fs.getType());
+            }
             return new Matcher(b, null, null);
         });
     }

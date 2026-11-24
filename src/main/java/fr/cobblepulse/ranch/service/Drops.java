@@ -151,9 +151,7 @@ public final class Drops {
     }
 
     private static boolean matches(Pokemon pk, String species) {
-        if (species == null) return false;
-        String s = species.toLowerCase(Locale.ROOT);
-        return s.equals(pk.getSpecies().getName().toLowerCase(Locale.ROOT)) || s.equals(pk.getSpecies().getResourceIdentifier().toString());
+        return species != null && fr.cobblepulse.ranch.breeding.Genetics.matches(pk.getSpecies(), species);
     }
 
     private static Item item(String id) {

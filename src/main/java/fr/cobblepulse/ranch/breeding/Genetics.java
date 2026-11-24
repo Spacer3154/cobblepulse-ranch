@@ -70,21 +70,33 @@ public final class Genetics {
         return chain;
     }
 
+    /** "nidoranf", "Nidoran-F", "cobblemon:nidoranf", "Mime Jr." -> "nidoranf" / "mimejr". */
+    public static String key(String s) {
+        if (s == null) return "";
+        String n = s.toLowerCase(Locale.ROOT).trim();
+        if (n.contains(":")) n = n.substring(n.indexOf(':') + 1);
+        return n.replaceAll("[^a-z0-9]", "");
+    }
+
     public static Species byName(String s) {
         if (s == null || s.isBlank()) return null;
         String n = s.toLowerCase(Locale.ROOT).trim();
-        if (n.contains(":")) {
-            ResourceLocation rl = ResourceLocation.tryParse(n);
-            Species sp = rl == null ? null : PokemonSpecies.getByIdentifier(rl);
-            if (sp != null) return sp;
-            n = n.substring(n.indexOf(':') + 1);
-        }
-        return PokemonSpecies.getByName(n);
+        ResourceLocation rl = ResourceLocation.tryParse(n.contains(":") ? n : "cobblemon:" + n);
+        Species sp = rl == null ? null : PokemonSpecies.getByIdentifier(rl);
+        if (sp != null) return sp;
+        sp = PokemonSpecies.getByName(n.contains(":") ? n.substring(n.indexOf(':') + 1) : n);
+        if (sp != null) return sp;
+        String k = key(s);
+        for (Species x : PokemonSpecies.getSpecies()) if (matches(x, k)) return x;
+        return null;
     }
 
-    private static boolean matches(Species sp, String key) {
-        String k = key.toLowerCase(Locale.ROOT);
-        return k.equals(sp.getName().toLowerCase(Locale.ROOT)) || k.equals(sp.getResourceIdentifier().toString());
+    /** Espece designee par cette cle (nom, identifiant Showdown ou identifiant complet, casse et ponctuation ignorees). */
+    public static boolean matches(Species sp, String key) {
+        String k = key(key);
+        if (k.isEmpty()) return false;
+        if (key.contains(":") && key.toLowerCase(Locale.ROOT).equals(sp.getResourceIdentifier().toString())) return true;
+        return k.equals(key(sp.getName())) || k.equals(key(sp.getResourceIdentifier().getPath())) || k.equals(key(sp.showdownId()));
     }
 
     /** Encens requis pour obtenir ce bebe (null si aucun). */

@@ -12,5 +12,12 @@
   "item.cobblepulse_ranch.luck_incense": "Encens Veine",
   "item.cobblepulse_ranch.full_incense": "Encens Plein",
   "item.cobblepulse_ranch.wave_incense": "Encens Vague",
-  "itemGroup.cobblepulse_ranch.main": "CobblePulse Ranch"
+  "itemGroup.cobblepulse_ranch.main": "CobblePulse Ranch",
+  "tag.block.minecraft.coral_blocks": "Blocs de corail",
+  "tag.block.minecraft.flowers": "Fleurs",
+  "tag.block.minecraft.leaves": "Feuillages",
+  "tag.block.minecraft.logs": "Bûches",
+  "tag.block.minecraft.wool": "Laine",
+  "tag.block.minecraft.crops": "Cultures",
+  "tag.block.minecraft.beds": "Lits"
 }

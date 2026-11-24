@@ -148,6 +148,11 @@ public final class Names {
         String id = formId(f);
         if (id.isEmpty()) return "";
         String l = id.toLowerCase(Locale.ROOT);
+        if (l.contains("bias")) {
+            // forme de Cobblemon qui fait evoluer vers la forme regionale (Pichu, Osselait...)
+            String r = l.replace("-bias", "").replace("bias", "");
+            return "Lignée " + (r.startsWith("alola") ? "d'Alola" : r.startsWith("galar") ? "de Galar" : r.startsWith("hisui") ? "de Hisui" : r.startsWith("paldea") ? "de Paldea" : r);
+        }
         if (l.startsWith("alola")) return "Forme d'Alola";
         if (l.startsWith("galar")) return "Forme de Galar";
         if (l.startsWith("hisui")) return "Forme de Hisui";
