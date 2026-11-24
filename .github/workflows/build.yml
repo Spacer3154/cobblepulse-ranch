@@ -37,7 +37,7 @@ jobs:
           git clone -q --depth 1 -b ci-output https://github.com/Spacer3154/cobblepulse-fakemons /tmp/ecology || true
           cp /tmp/ecology/cobblepulse-ecology-*.jar ci/mods/ 2>/dev/null || true
           # CobblePulse Utils (GTS : castration et fiche des oeufs)
-          curl -sfL -o ci/mods/cobblepulse-utils.jar https://raw.githubusercontent.com/Spacer3154/cobblepulse-utils/ci-output/cobblepulse-utils-1.0.0.jar || rm -f ci/mods/cobblepulse-utils.jar
+          curl -sfL -o ci/mods/cobblepulse-utils.jar https://raw.githubusercontent.com/Spacer3154/cobblepulse-utils/ci-output/cobblepulse-utils-1.5.0.jar || rm -f ci/mods/cobblepulse-utils.jar
           ls -la ci/mods > out/extra-mods.txt 2>&1 || true
 
       - name: Build
