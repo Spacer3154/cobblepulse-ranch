@@ -34,7 +34,7 @@ public final class CapsuleScreen extends RanchUi {
 
     @Override
     protected void init() {
-        layout(320, 232);
+        layout(320, 246);
     }
 
     private void choose(String stat) {
