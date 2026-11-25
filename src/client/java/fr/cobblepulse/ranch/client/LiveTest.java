@@ -40,7 +40,7 @@ final class LiveTest {
     private static final java.util.Map<Integer, String> UNTIL_NAME = new java.util.HashMap<>();
     private static int awaitStart = -1;
     private static final List<String> CHAT = new ArrayList<>();
-    private static int ticks, start = -1, step, pass, fail, partyBefore;
+    private static int ticks, start = -1, step, pass, fail, partyBefore, eggsBefore;
     private static double stepsBefore;
 
     private static final int X = 3000, Y = 300, Z = 3000;
@@ -95,6 +95,17 @@ final class LiveTest {
         var inv = mc.player.getInventory();
         for (int i = 0; i < 36; i++) if (inv.getItem(i).is(item)) return i;
         return -1;
+    }
+
+    private static int eggCount(Minecraft mc) {
+        return eggsInInventory(mc).size();
+    }
+
+    private static List<ItemStack> eggsInInventory(Minecraft mc) {
+        List<ItemStack> l = new ArrayList<>();
+        var inv = mc.player.getInventory();
+        for (int i = 0; i < 36; i++) if (inv.getItem(i).is(ModContent.POKEMON_EGG)) l.add(inv.getItem(i));
+        return l;
     }
 
     private static int menuSlot(int inv) {
@@ -491,6 +502,36 @@ final class LiveTest {
         });
         add(40, mc -> shot(mc, "live_10_bloc_pension_monde"));
         add(20, mc -> {
+            mc.setScreen(null);
+            eggsBefore = eggCount(mc);
+            CHAT.clear();
+            cmd(mc, "pokegive egg charmander shiny=yes");
+        });
+        until("pokegive_egg", 400, mc -> eggCount(mc) > eggsBefore);
+        add(10, mc -> {
+            boolean ok = false;
+            var inv = mc.player.getInventory();
+            for (int i = 0; i < 36; i++) {
+                CompoundTag t = inv.getItem(i).get(ModContent.EGG_DATA);
+                if (t != null && t.getCompound("info").getString("species").endsWith("charmander") && t.getCompound("info").getBoolean("shiny")) ok = true;
+            }
+            check("pokegive_egg_salameche_chromatique", ok, lastChat());
+            eggsBefore = eggCount(mc);
+            cmd(mc, "pokegive egg random");
+        });
+        until("pokegive_egg_random", 400, mc -> eggCount(mc) > eggsBefore);
+        add(10, mc -> {
+            eggsBefore = eggCount(mc);
+            cmd(mc, "pokegiveother " + mc.player.getGameProfile().getName() + " egg random_reproductible");
+        });
+        until("pokegiveother_egg", 400, mc -> eggCount(mc) > eggsBefore);
+        add(10, mc -> {
+            check("pokegive_egg_commandes", eggCount(mc) >= 3, eggCount(mc) + " oeufs");
+            mc.setScreen(new EggGrid(eggsInInventory(mc)));
+        });
+        add(20, mc -> shot(mc, "live_11_pokegive_oeufs"));
+        add(20, mc -> {
+            mc.setScreen(null);
             CHAT.clear();
             cmd(mc, "setblock " + X + " " + Y + " " + Z + " minecraft:air");
         });

@@ -91,6 +91,7 @@ public final class RanchCommands {
     }
 
     public static void register(CommandDispatcher<CommandSourceStack> d) {
+
         // ---------------- /daycare
         d.register(literal("daycare").requires(s -> Perms.has(s, Perms.CMD_DAYCARE))
                 .executes(ctx -> run(ctx, p -> {

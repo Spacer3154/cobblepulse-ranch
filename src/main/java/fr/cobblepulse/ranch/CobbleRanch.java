@@ -72,6 +72,10 @@ public final class CobbleRanch implements ModInitializer {
         Drops.load();
         Drops.register();
         CommandRegistrationCallback.EVENT.register((d, ctx, env) -> RanchCommands.register(d));
+        // /pokegive egg : apres les commandes de Cobblemon (phase tardive), pour se greffer sur ses noeuds
+        ResourceLocation late = id("after_cobblemon");
+        CommandRegistrationCallback.EVENT.addPhaseOrdering(net.fabricmc.fabric.api.event.Event.DEFAULT_PHASE, late);
+        CommandRegistrationCallback.EVENT.register(late, (d, ctx, env) -> fr.cobblepulse.ranch.command.EggGive.register(d));
 
         ServerLifecycleEvents.SERVER_STARTING.register(s -> {
             server = s;

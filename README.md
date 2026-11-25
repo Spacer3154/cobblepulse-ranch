@@ -50,6 +50,9 @@ Utils lit deux points d'entrée du mod, sans dépendance de compilation : `cobbl
 | `/hatch instant` | VIP : éclosion immédiate de l'œuf en main |
 | `/eggsee` | Fiche complète de l'œuf en main (chat) |
 | `/castrer <empl.> [confirmer]` | Castration (Dresseur d'Origine) ; alias `/neuter` |
+| `/pokegive egg <propriétés>` | Staff : œuf de n'importe quelle espèce (Cobblemon, mods, datapacks, Fakemons), avec les propriétés Cobblemon (`shiny=yes`, `nature=…`, `ability=…`, IV…) |
+| `/pokegive egg random` | Staff : œuf d'une espèce au hasard ; `random_reproductible` exclut le groupe Inconnu ; propriétés en plus possibles (`random shiny=yes`) |
+| `/pokegiveother <joueur> egg <…>` | Staff : même chose pour un autre joueur |
 | `/cobbleranch guide` | Guide de la Pension |
 | `/cobbleranch admin` | Panneau d'administration |
 | `/cobbleranch reload` | Recharge `config/cobbleranch/` |
@@ -57,7 +60,7 @@ Utils lit deux points d'entrée du mod, sans dépendance de compilation : `cobbl
 | `/cobbleranch fertilite\|castration <joueur> <empl.> …` | Support staff |
 
 ## Permissions
-Nœuds du CDC (section 7.2) et `cobbleranch.user.neuter`. Sans valeur dans LuckPerms : `user.*` et les commandes de base sont permis à tous ; les nœuds VIP, `bypass.*` et `admin.*` sont réservés aux opérateurs (niveau `op_level_fallback`, 2 par défaut). Un refus explicite dans LuckPerms l'emporte. Dans le panneau admin, un bouton sans permission n'est pas affiché ; une action forcée sans permission est refusée, enregistrée dans le journal et signalée au staff en ligne.
+Nœuds du CDC (section 7.2), `cobbleranch.user.neuter` et `cobbleranch.command.pokegive.egg` (opérateurs par défaut ; `/pokegive` de Cobblemon garde sa propre permission). Sans valeur dans LuckPerms : `user.*` et les commandes de base sont permis à tous ; les nœuds VIP, `bypass.*` et `admin.*` sont réservés aux opérateurs (niveau `op_level_fallback`, 2 par défaut). Un refus explicite dans LuckPerms l'emporte. Dans le panneau admin, un bouton sans permission n'est pas affiché ; une action forcée sans permission est refusée, enregistrée dans le journal et signalée au staff en ligne.
 
 ## Configuration (`config/cobbleranch/`)
 - `config.json` : clés du CDC, plus `max_ranch_blocks_per_player`, `max_eggs_per_slot`, `language`, `masuda_mode`, `regional_form_mother_chance` (0,30), `inheritable_form_keywords`, `non_inheritable_balls`, `blocked_species`/`blocked_labels`, `incense_babies`, `offspring_variants`, `steps_per_egg_cycle` (256), `steps_per_block`, `silver_hourglass_fixed_egg_steps`, `hatch_boost_abilities`, `remote_breed` (emplacements, durée, coût), `neutering`.
@@ -66,6 +69,6 @@ Nœuds du CDC (section 7.2) et `cobbleranch.user.neuter`. Sans valeur dans LuckP
 ## Tests automatiques (GitHub Actions)
 - Vrai serveur (Cobblemon 1.8.4, LuckPerms, Mega Showdown, CobblePulse-Ecology, datapack d'espèces de test) : contenu, règles et génétique sur des centaines de tirages, habitat dans le monde, évaluation à la demande, persistance, anti-duplication, journal.
 - Arrêt brutal (`kill -9`) au milieu d'un dépôt, puis redémarrage : vérification qu'il n'y a pas de doublon.
-- Vrai client connecté : bloc, écrans, choix dans le PC, sabliers, œuf, `/eggsee`, `/hatch`, éclosion, `/breed`, `/daycare`, castration, Guide, admin.
+- Vrai client connecté : bloc, écrans, choix dans le PC, sabliers, œuf, `/eggsee`, `/hatch`, éclosion, `/breed`, `/daycare`, castration, `/pokegive egg`, Guide, admin.
 
 Les résultats et le jar sont publiés sur la branche `ci-output`.

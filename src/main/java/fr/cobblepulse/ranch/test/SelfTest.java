@@ -184,6 +184,7 @@ public final class SelfTest {
         QUEUE.add(SelfTest::journal);
         QUEUE.add(SelfTest::eggData);
         QUEUE.add(SelfTest::dropsAndNeuter);
+        QUEUE.add(SelfTest::pokegiveEgg);
         QUEUE.add(SelfTest::performance);
         QUEUE.add(() -> {
             CobbleRanch.LOG.info(TAG + "SELFTEST SUMMARY: {} pass, {} fail", pass, fail);
@@ -783,6 +784,41 @@ public final class SelfTest {
         } catch (Throwable t) {
             check("utils_gts", false, t.toString());
         }
+    }
+
+    /** /pokegive egg : oeufs de n'importe quelle espece ou au hasard ; /pokegive de Cobblemon garde sa permission. */
+    static void pokegiveEgg() {
+        CompoundTag c = fr.cobblepulse.ranch.command.EggGive.create("charizard shiny=yes nature=adamant", "test");
+        Pokemon p = EggData.pokemon(c);
+        check("pokegive_egg_espece", p != null && p.getSpecies().getName().equalsIgnoreCase("charizard") && p.getShiny() && p.getLevel() == 1
+                && p.getNature().getName().getPath().equals("adamant"), p == null ? "" : p.getSpecies().getName() + " " + p.getLevel());
+        Set<String> seen = new HashSet<>();
+        for (int i = 0; i < 30; i++) seen.add(EggData.info(fr.cobblepulse.ranch.command.EggGive.create("random", "test")).getString("species"));
+        check("pokegive_egg_random", seen.size() >= 20, seen.size() + " especes sur 30");
+        boolean breedable = true;
+        for (int i = 0; i < 30; i++) {
+            Pokemon r = EggData.pokemon(fr.cobblepulse.ranch.command.EggGive.create("random_reproductible shiny=yes", "test"));
+            var g = r.getSpecies().getEggGroups();
+            breedable &= g != null && !g.isEmpty() && !g.contains(com.cobblemon.mod.common.api.pokemon.egg.EggGroup.UNDISCOVERED) && r.getShiny();
+        }
+        check("pokegive_egg_random_reproductible", breedable, null);
+        if (PokemonSpecies.getByName("zamtrios") != null)
+            check("pokegive_egg_fakemon", EggData.info(fr.cobblepulse.ranch.command.EggGive.create("zamtrios", "test")).getString("species").endsWith("zamtrios"), null);
+        boolean refused = false;
+        try {
+            fr.cobblepulse.ranch.command.EggGive.create("pasunpokemon", "test");
+        } catch (IllegalArgumentException e) {
+            refused = true;
+        }
+        check("pokegive_egg_espece_inconnue", refused, null);
+        var root = CobbleRanch.server().getCommands().getDispatcher().getRoot();
+        var give = root.getChild("pokegive");
+        var other = root.getChild("pokegiveother");
+        var anyone = CobbleRanch.server().createCommandSourceStack().withPermission(0);
+        check("pokegive_egg_greffe", give != null && give.getChild("egg") != null && other != null && other.getChild("player") != null
+                && other.getChild("player").getChild("egg") != null, null);
+        check("pokegive_permission_cobblemon_conservee", give != null && !give.canUse(anyone), null);
+        check("pokegive_normal_intact", give != null && give.getChildren().size() >= 2, give == null ? "" : give.getChildren().size() + " enfants");
     }
 
     static void performance() {
