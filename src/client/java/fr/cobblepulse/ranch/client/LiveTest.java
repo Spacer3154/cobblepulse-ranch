@@ -580,7 +580,7 @@ final class LiveTest {
         });
         until("capsule_menu", 200, mc -> chatHas("choisis un Pokémon"));
         add(10, mc -> {
-            check("capsule_menu_equipe", chatHas("Machop"), lastChat());
+            check("capsule_menu_equipe", chatHas("Niv. 100") && chatHas("à entraîner"), lastChat());
             // sort Machop de sa Poke Ball (comme la touche R de Cobblemon)
             new com.cobblemon.mod.common.net.messages.server.SendOutPokemonPacket(capSlot - 1).sendToServer();
         });

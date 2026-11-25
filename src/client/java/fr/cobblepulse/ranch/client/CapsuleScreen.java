@@ -79,6 +79,13 @@ public final class CapsuleScreen extends RanchUi {
             if (!gold) btn(g, "stat_" + str(s, "key"), px + pw - 62, y - 1, 50, 14, can ? "Choisir" : "Max", can, mx, my, () -> choose(str(s, "key")));
             y += 20;
         }
+        // legende des deux barres
+        g.fill(px + 10, y + 3, px + 18, y + 7, ACCENT);
+        g.drawString(font, "IV en combat" + (gold ? "" : " (aperçu)"), px + 22, y + 1, MUTED, false);
+        int lx = px + 30 + font.width("IV en combat (aperçu)");
+        g.fill(lx, y + 3, lx + 8, y + 7, MUTED);
+        g.drawString(font, "IV d'origine (transmis)", lx + 12, y + 1, MUTED, false);
+        y += 12;
         y = wrap(g, "Seules les statistiques de combat changent : la reproduction transmet toujours les IV d'origine.", px + 10, y + 2, pw - 20, MUTED);
         if (!status.isEmpty()) g.drawString(font, font.plainSubstrByWidth(status, pw - 20), px + 10, py + ph - 34, statusColor, false);
         if (gold) btn(g, "gold", px + 10, py + ph - 22, 150, 16, "Tout monter à 31", true, mx, my, () -> choose("tout"));
