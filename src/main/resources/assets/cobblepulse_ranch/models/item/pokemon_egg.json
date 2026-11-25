@@ -1,7 +1,2282 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cobblepulse_ranch:item/pokemon_egg",
-    "layer1": "cobblepulse_ranch:item/pokemon_egg_spots"
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "cobblepulse_ranch:item/egg/default_pokemon_egg"
+ },
+ "overrides": [
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.03125,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/normal_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.0625,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/fire_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/water_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/water_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/water_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/water_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/water_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/water_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/water_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/water_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/water_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/water_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/water_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/water_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/water_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/water_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/water_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/water_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/water_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.09375,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/water_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.125,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/grass_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.15625,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/electric_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.1875,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/ice_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.21875,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/fighting_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.25,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/poison_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.28125,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/ground_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.3125,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/flying_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.34375,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/psychic_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.375,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/bug_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.40625,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/rock_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.4375,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/ghost_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.46875,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/dragon_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/dark_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.53125,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/steel_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_normal"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.0625
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_fire"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.09375
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_water"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.125
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_grass"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.15625
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_electric"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.1875
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_ice"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.21875
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_fighting"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.25
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_poison"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.28125
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_ground"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.3125
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_flying"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.34375
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_psychic"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.375
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_bug"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.40625
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_rock"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.4375
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_ghost"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.46875
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_dragon"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.5
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_dark"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.53125
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_steel"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_primary": 0.5625,
+    "cobblepulse_ranch:egg_secondary": 0.5625
+   },
+   "model": "cobblepulse_ranch:item/egg/fairy_fairy"
+  },
+  {
+   "predicate": {
+    "cobblepulse_ranch:egg_special": 0.03125
+   },
+   "model": "cobblepulse_ranch:item/egg/manaphy"
   }
+ ]
 }

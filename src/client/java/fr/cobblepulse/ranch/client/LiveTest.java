@@ -130,6 +130,46 @@ final class LiveTest {
         mc.gameMode.useItemOn(mc.player, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(pos).relative(face, 0.5), face, pos, false));
     }
 
+    static ItemStack fakeEgg(String species, String t1, String t2) {
+        ItemStack st = new ItemStack(ModContent.POKEMON_EGG);
+        CompoundTag egg = new CompoundTag();
+        CompoundTag info = new CompoundTag();
+        info.putString("species", species);
+        info.putString("type1", t1);
+        info.putString("type2", t2);
+        egg.put("info", info);
+        st.set(ModContent.EGG_DATA, egg);
+        return st;
+    }
+
+    /** Grille d'oeufs (capture de l'apparence par type). */
+    static final class EggGrid extends Screen {
+        private final List<ItemStack> eggs;
+
+        EggGrid(List<ItemStack> eggs) {
+            super(Component.literal("Oeufs"));
+            this.eggs = eggs;
+        }
+
+        @Override
+        public void render(GuiGraphics g, int mx, int my, float pt) {
+            super.render(g, mx, my, pt);
+            g.drawString(font, "Oeufs : fond = type principal, taches = second type", 10, 8, 0xFFFFFF);
+            for (int i = 0; i < eggs.size(); i++) {
+                int col = i % 9, row = i / 9;
+                g.pose().pushPose();
+                g.pose().translate(10 + col * 40, 24 + row * 44, 0);
+                g.pose().scale(2f, 2f, 1f);
+                g.renderItem(eggs.get(i), 0, 0);
+                g.pose().popPose();
+                CompoundTag info = eggs.get(i).get(ModContent.EGG_DATA).getCompound("info");
+                String label = info.getString("species").endsWith("manaphy") ? "manaphy" : info.getString("type1").substring(0, Math.min(4, info.getString("type1").length()))
+                        + (info.getString("type2").isEmpty() ? "" : "/" + info.getString("type2").substring(0, 4));
+                g.drawString(font, label, 10 + col * 40, 58 + row * 44, 0xCCCCCC);
+            }
+        }
+    }
+
     /** Ecran temporaire qui dessine l'infobulle de l'oeuf (capture). */
     static final class TooltipShot extends Screen {
         private final List<Component> full, compact;
@@ -283,6 +323,32 @@ final class LiveTest {
             }
         });
         add(20, mc -> shot(mc, "live_05_infobulle_oeuf"));
+        add(10, mc -> {
+            // apparence des oeufs par type : fond = type principal, taches = second type
+            List<ItemStack> eggs = new ArrayList<>();
+            for (String t : EggModels.TYPES) eggs.add(fakeEgg("cobblemon:test", t, ""));
+            String[][] duals = {{"water", "ground"}, {"grass", "poison"}, {"fire", "flying"}, {"bug", "steel"}, {"dragon", "fairy"}, {"ghost", "dark"},
+                    {"electric", "ice"}, {"rock", "psychic"}, {"normal", "fighting"}};
+            for (String[] d : duals) eggs.add(fakeEgg("cobblemon:test", d[0], d[1]));
+            eggs.add(fakeEgg("cobblemon:manaphy", "water", ""));
+            eggs.add(fakeEgg("cobblemon:test", "inconnu", ""));
+            var r = mc.getItemRenderer();
+            var missing = mc.getModelManager().getMissingModel();
+            java.util.Set<Object> models = new java.util.HashSet<>();
+            boolean anyMissing = false;
+            for (ItemStack e : eggs) {
+                var m = r.getModel(e, mc.level, mc.player, 0);
+                anyMissing |= m == missing;
+                models.add(m);
+            }
+            check("oeufs_modeles_par_type", !anyMissing && models.size() == eggs.size(), models.size() + " modeles distincts pour " + eggs.size() + " oeufs");
+            var water = r.getModel(fakeEgg("cobblemon:x", "water", ""), mc.level, mc.player, 0);
+            var waterGround = r.getModel(fakeEgg("cobblemon:x", "water", "ground"), mc.level, mc.player, 0);
+            var dflt = r.getModel(new ItemStack(ModContent.POKEMON_EGG), mc.level, mc.player, 0);
+            check("second_type_en_taches", water != waterGround && water != dflt, null);
+            mc.setScreen(new EggGrid(eggs));
+        });
+        add(20, mc -> shot(mc, "live_05b_oeufs_par_type"));
         add(20, mc -> {
             mc.setScreen(null);
             int e = find(mc, ModContent.POKEMON_EGG);

@@ -81,6 +81,14 @@ public final class EggData {
             moves.add(mt);
         }
         i.put("egg_moves", moves);
+        // types (texture de l'oeuf : fond = type principal, taches = second type)
+        try {
+            i.putString("type1", p.getForm().getPrimaryType().getShowdownId());
+            var t2 = p.getForm().getSecondaryType();
+            i.putString("type2", t2 == null ? "" : t2.getShowdownId());
+        } catch (Throwable ignored) {
+        }
+        i.putString("form_id", Names.formId(p.getForm()));
         int color = 0xF2E6C8;
         try {
             color = p.getForm().getPrimaryType().getHue();

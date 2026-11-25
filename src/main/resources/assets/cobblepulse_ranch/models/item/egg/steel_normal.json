@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblepulse_ranch:item/egg/steel_pokemon_egg",
+    "layer1": "cobblepulse_ranch:item/egg/normal_spots"
+  }
+}

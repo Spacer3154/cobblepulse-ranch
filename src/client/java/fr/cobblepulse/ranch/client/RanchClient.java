@@ -9,7 +9,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -34,12 +33,7 @@ public final class RanchClient implements ClientModInitializer {
     public void onInitializeClient() {
         ClientPlayNetworking.registerGlobalReceiver(RanchNet.Data.TYPE, (payload, ctx) -> ctx.client().execute(() -> handle(payload.kind(), payload.json())));
         BlockRenderLayerMap.INSTANCE.putBlock(ModContent.RANCH_BLOCK, RenderType.cutout());
-        ColorProviderRegistry.ITEM.register((stack, tint) -> {
-            if (tint != 1) return -1;
-            CompoundTag t = stack.get(ModContent.EGG_DATA);
-            int c = t == null ? 0x7FB069 : t.getCompound("info").getInt("color");
-            return 0xFF000000 | (c == 0 ? 0x7FB069 : c);
-        }, ModContent.POKEMON_EGG);
+        EggModels.register();
         ItemTooltipCallback.EVENT.register((stack, ctx, flag, lines) -> {
             if (stack.is(ModContent.POKEMON_EGG)) eggTooltip(stack, lines);
         });

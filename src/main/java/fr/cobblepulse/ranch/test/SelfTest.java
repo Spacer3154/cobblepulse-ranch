@@ -706,6 +706,12 @@ public final class SelfTest {
         Genetics.Result res = Genetics.breed(lc, new Random(5));
         check("lucario_donne_riolu", res.child().getSpecies().getName().equalsIgnoreCase("riolu"), res.child().getSpecies().getName());
         CompoundTag egg = EggData.build(res.child(), res, "Lucario ♀ x Métamorph");
+        check("types_de_l_oeuf", EggData.info(egg).getString("type1").equals("fighting") && EggData.info(egg).getString("type2").isEmpty(),
+                EggData.info(egg).getString("type1") + "/" + EggData.info(egg).getString("type2"));
+        Genetics.Result dual = Genetics.breed(pair(mon("bulbasaur gender=female"), mon("ditto")), new Random(6));
+        CompoundTag de = EggData.build(dual.child(), dual, "test");
+        check("types_double", EggData.info(de).getString("type1").equals("grass") && EggData.info(de).getString("type2").equals("poison"),
+                EggData.info(de).getString("type1") + "/" + EggData.info(de).getString("type2"));
         ItemStack st = EggData.toStack(egg);
         check("objet_oeuf", EggData.of(st) != null && EggData.id(EggData.of(st)).equals(EggData.id(egg)), null);
         ItemStack copy = st.copy();
