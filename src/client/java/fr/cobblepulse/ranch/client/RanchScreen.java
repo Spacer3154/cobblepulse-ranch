@@ -211,6 +211,8 @@ public final class RanchScreen extends RanchUi {
         t.add(Component.literal("Groupes : " + String.join(", ", strs(p, "groups"))).withStyle(ChatFormatting.GRAY));
         t.add(Component.literal("Talent : " + str(p, "ability") + " | Nature : " + str(p, "nature")).withStyle(ChatFormatting.GRAY));
         t.add(Component.literal("IV : " + num(p, "iv_total") + "/186").withStyle(ChatFormatting.GRAY));
+        if (p.has("iv_hyper") && !p.get("iv_hyper").getAsString().isEmpty())
+            t.add(Component.literal("✦ Capsules : " + p.get("iv_hyper").getAsString() + " (31 en combat, IV d'origine transmis)").withStyle(ChatFormatting.AQUA));
         if (!held.isEmpty()) t.add(Component.literal("Tient : " + str(p, "held_name") + (str(p, "held_effect").isEmpty() ? "" : " — " + str(p, "held_effect")))
                 .withStyle(str(p, "held_effect").isEmpty() ? ChatFormatting.GRAY : ChatFormatting.AQUA));
         if (bool(data, "fertility_on")) t.add(Component.literal("Fertilité : " + num(p, "fertility") + "/" + num(p, "fertility_max")).withStyle(ChatFormatting.GRAY));

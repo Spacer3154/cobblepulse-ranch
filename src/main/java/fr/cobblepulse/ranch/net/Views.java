@@ -70,6 +70,7 @@ public final class Views {
         int tot = 0;
         for (int i = 0; i < 6; i++) tot += p.getIvs().getOrDefault(Genetics.STATS[i]);
         o.addProperty("iv_total", tot);
+        o.addProperty("iv_hyper", fr.cobblepulse.ranch.service.BottleCaps.hyperLabel(p));
         return o;
     }
 
@@ -219,6 +220,8 @@ public final class Views {
         o.addProperty("silver_mode", c.hatching_and_items.silver_hourglass_reduction_mode);
         o.addProperty("silver_value", c.hatching_and_items.silver_hourglass_value);
         o.addProperty("ditto_ditto", Compatibility.dittoXDittoAllowed());
+        o.addProperty("caps_on", c.bottle_caps.enabled);
+        o.addProperty("caps_level", fr.cobblepulse.ranch.service.BottleCaps.minLevel());
         JsonArray groups = new JsonArray();
         for (Map.Entry<String, List<HabitatConfig.Entry>> e : ConfigManager.habitat().entrySet()) {
             JsonObject g = new JsonObject();

@@ -38,6 +38,8 @@ public final class ModContent {
     public static PokemonEggItem POKEMON_EGG;
     public static HourglassItem SILVER_HOURGLASS;
     public static HourglassItem GOLD_HOURGLASS;
+    public static fr.cobblepulse.ranch.item.BottleCapItem SILVER_BOTTLE_CAP;
+    public static fr.cobblepulse.ranch.item.BottleCapItem GOLD_BOTTLE_CAP;
     public static final List<Item> INCENSE_ITEMS = new ArrayList<>();
     public static DataComponentType<CompoundTag> EGG_DATA;
 
@@ -61,6 +63,10 @@ public final class ModContent {
                 new HourglassItem(false, new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON)));
         GOLD_HOURGLASS = Registry.register(BuiltInRegistries.ITEM, CobbleRanch.id("gold_hourglass"),
                 new HourglassItem(true, new Item.Properties().stacksTo(64).rarity(Rarity.RARE)));
+        SILVER_BOTTLE_CAP = Registry.register(BuiltInRegistries.ITEM, CobbleRanch.id("silver_bottle_cap"),
+                new fr.cobblepulse.ranch.item.BottleCapItem(false, new Item.Properties().stacksTo(64)));
+        GOLD_BOTTLE_CAP = Registry.register(BuiltInRegistries.ITEM, CobbleRanch.id("gold_bottle_cap"),
+                new fr.cobblepulse.ranch.item.BottleCapItem(true, new Item.Properties().stacksTo(64)));
         for (String s : INCENSES) {
             INCENSE_ITEMS.add(Registry.register(BuiltInRegistries.ITEM, CobbleRanch.id(s + "_incense"), new Item(new Item.Properties().stacksTo(64))));
         }
@@ -71,6 +77,8 @@ public final class ModContent {
                             out.accept(RANCH_ITEM);
                             out.accept(SILVER_HOURGLASS);
                             out.accept(GOLD_HOURGLASS);
+                            out.accept(SILVER_BOTTLE_CAP);
+                            out.accept(GOLD_BOTTLE_CAP);
                             for (Item i : INCENSE_ITEMS) out.accept(i);
                         }).build());
     }

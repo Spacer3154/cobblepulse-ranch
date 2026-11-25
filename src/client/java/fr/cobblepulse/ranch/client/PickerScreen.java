@@ -109,6 +109,8 @@ public final class PickerScreen extends RanchUi {
             t.add(Component.literal(pokeName(e) + " " + gender(e)).withStyle(ChatFormatting.WHITE));
             t.add(Component.literal("Talent : " + str(e, "ability") + " | Nature : " + str(e, "nature")).withStyle(ChatFormatting.GRAY));
             t.add(Component.literal("IV : " + num(e, "iv_total") + "/186").withStyle(ChatFormatting.GRAY));
+            if (e.has("iv_hyper") && !e.get("iv_hyper").getAsString().isEmpty())
+                t.add(Component.literal("✦ Capsules : " + e.get("iv_hyper").getAsString() + " (31 en combat, IV d'origine transmis)").withStyle(ChatFormatting.AQUA));
             if (!held.isEmpty()) t.add(Component.literal("Tient : " + str(e, "held_name") + (str(e, "held_effect").isEmpty() ? "" : " — " + str(e, "held_effect"))).withStyle(ChatFormatting.AQUA));
             if (!ok) t.add(Component.literal(str(e, "reason")).withStyle(ChatFormatting.RED));
             tip(px + 6, y, pw - 12, rowH - 2, t);

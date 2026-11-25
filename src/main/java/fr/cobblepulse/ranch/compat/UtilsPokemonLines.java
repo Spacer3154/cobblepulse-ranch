@@ -21,6 +21,8 @@ public final class UtilsPokemonLines implements Function<Pokemon, List<String>> 
             int f = Traits.fertility(p);
             l.add("&7Fertilité : " + (f <= 0 ? "&c" : "&a") + f + "/" + Traits.maxFertility());
         }
+        String caps = fr.cobblepulse.ranch.service.BottleCaps.hyperLabel(p);
+        if (!caps.isEmpty()) l.add("&b✦ Entraînement Ultime : " + caps + " &8(31 en combat, IV d'origine transmis)");
         return l;
     }
 }

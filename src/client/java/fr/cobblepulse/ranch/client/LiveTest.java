@@ -40,7 +40,7 @@ final class LiveTest {
     private static final java.util.Map<Integer, String> UNTIL_NAME = new java.util.HashMap<>();
     private static int awaitStart = -1;
     private static final List<String> CHAT = new ArrayList<>();
-    private static int ticks, start = -1, step, pass, fail, partyBefore, eggsBefore;
+    private static int ticks, start = -1, step, pass, fail, partyBefore, eggsBefore, capSlot;
     private static double stepsBefore;
 
     private static final int X = 3000, Y = 300, Z = 3000;
@@ -106,6 +106,27 @@ final class LiveTest {
         var inv = mc.player.getInventory();
         for (int i = 0; i < 36; i++) if (inv.getItem(i).is(ModContent.POKEMON_EGG)) l.add(inv.getItem(i));
         return l;
+    }
+
+    /** Met l'objet dans la barre rapide (emplacement hb) et le prend en main. */
+    private static void toHotbar(Minecraft mc, Item item, int hb) {
+        int s = find(mc, item);
+        if (s >= 0 && s != hb)
+            mc.gameMode.handleInventoryMouseClick(mc.player.inventoryMenu.containerId, menuSlot(s), hb, net.minecraft.world.inventory.ClickType.SWAP, mc.player);
+        mc.player.getInventory().selected = hb;
+        mc.player.connection.send(new net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket(hb));
+    }
+
+    /** IV vus par le client (synchronisation de Cobblemon), pour le detail des tests. */
+    private static String clientIvs(int slot) {
+        try {
+            var p = CobblemonClient.INSTANCE.getStorage().getParty().getSlots().get(slot - 1);
+            StringBuilder b = new StringBuilder(" | client combat ");
+            for (int i = 0; i < 6; i++) b.append(i == 0 ? "" : "/").append(p.getIvs().getEffectiveBattleIV(fr.cobblepulse.ranch.breeding.Genetics.STATS[i]));
+            return b.toString();
+        } catch (Throwable t) {
+            return "";
+        }
     }
 
     private static int menuSlot(int inv) {
@@ -530,6 +551,74 @@ final class LiveTest {
             mc.setScreen(new EggGrid(eggsInInventory(mc)));
         });
         add(20, mc -> shot(mc, "live_11_pokegive_oeufs"));
+        // ---- Capsules d'Argent / d'Or (survie : la capsule est consommee)
+        add(20, mc -> {
+            mc.setScreen(null);
+            String me = mc.player.getGameProfile().getName();
+            CHAT.clear();
+            cmd(mc, "gamemode survival");
+            cmd(mc, "cobbleranch selftest partyiv0 " + me + " machop gender=male level=100");
+            cmd(mc, "cobbleranch give " + me + " silver_bottle_cap 1");
+            cmd(mc, "cobbleranch give " + me + " gold_bottle_cap 1");
+        });
+        until("capsules_recues", 400, mc -> partySlot("machop", "MALE", 100) > 0 && find(mc, ModContent.SILVER_BOTTLE_CAP) >= 0
+                && find(mc, ModContent.GOLD_BOTTLE_CAP) >= 0);
+        add(10, mc -> toHotbar(mc, ModContent.SILVER_BOTTLE_CAP, 7));
+        add(10, mc -> {
+            capSlot = partySlot("machop", "MALE", 100);
+            CHAT.clear();
+            cmd(mc, "capsule");
+        });
+        until("capsule_menu", 200, mc -> chatHas("choisis un Pokémon"));
+        add(10, mc -> {
+            check("capsule_menu_equipe", chatHas("Machop"), lastChat());
+            CHAT.clear();
+            cmd(mc, "capsule " + capSlot);
+        });
+        until("capsule_choix_stat", 200, mc -> chatHas("quelle statistique"));
+        add(10, mc -> {
+            CHAT.clear();
+            cmd(mc, "capsule " + capSlot + " attaque");
+        });
+        until("capsule_argent", 200, mc -> chatHas("Entraînement Ultime"));
+        add(10, mc -> {
+            check("capsule_argent_consommee", find(mc, ModContent.SILVER_BOTTLE_CAP) < 0, null);
+            CHAT.clear();
+            cmd(mc, "cobbleranch selftest ivs " + mc.player.getGameProfile().getName() + " " + capSlot);
+        });
+        until("capsule_ivs_argent", 200, mc -> chatHas("IV base"));
+        add(10, mc -> {
+            check("capsule_argent_attaque_31", chatHas("base 0/0/0/0/0/0 combat 0/31/0/0/0/0"), lastChat() + clientIvs(capSlot));
+            mc.setScreen(new net.minecraft.client.gui.screens.ChatScreen(""));
+        });
+        add(20, mc -> shot(mc, "live_12_capsule_argent"));
+        add(10, mc -> {
+            mc.setScreen(null);
+            toHotbar(mc, ModContent.GOLD_BOTTLE_CAP, 6);
+        });
+        add(20, mc -> {
+            CHAT.clear();
+            cmd(mc, "capsule " + capSlot + " tout");
+        });
+        until("capsule_or", 200, mc -> chatHas("Entraînement Ultime"));
+        add(10, mc -> {
+            check("capsule_or_consommee", find(mc, ModContent.GOLD_BOTTLE_CAP) < 0, null);
+            CHAT.clear();
+            cmd(mc, "cobbleranch selftest ivs " + mc.player.getGameProfile().getName() + " " + capSlot);
+        });
+        until("capsule_ivs_or", 200, mc -> chatHas("IV base"));
+        add(10, mc -> {
+            check("capsule_or_toutes_31", chatHas("base 0/0/0/0/0/0 combat 31/31/31/31/31/31"), lastChat() + clientIvs(capSlot));
+            CHAT.clear();
+            cmd(mc, "capsule " + capSlot + " tout");
+        });
+        until("capsule_refus", 200, mc -> chatHas("Capsule d'Argent ou une Capsule d'Or") || chatHas("déjà au maximum"));
+        add(10, mc -> {
+            check("capsule_sans_objet_refusee", chatHas("Capsule d'Argent ou une Capsule d'Or"), lastChat());
+            mc.setScreen(new net.minecraft.client.gui.screens.ChatScreen(""));
+        });
+        add(20, mc -> shot(mc, "live_13_capsule_or"));
+        add(10, mc -> cmd(mc, "gamemode creative"));
         add(20, mc -> {
             mc.setScreen(null);
             CHAT.clear();

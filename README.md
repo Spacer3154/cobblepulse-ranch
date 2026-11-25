@@ -28,6 +28,7 @@ Données lues dans Cobblemon au démarrage : espèces officielles, de mods, de d
 - L'œuf est un objet. Toute sa génétique est figée à la ponte (aucun nouveau tirage au GTS ni à l'éclosion). Il éclot en marchant, avec ×2 si un Pokémon à Corps Ardent, Armumagma ou Turbine est dans l'équipe. L'infobulle donne l'espèce, la progression et le statut ; avec Maj, la fiche complète. L'œuf brille s'il est chromatique. Apparence selon les types (textures fournies par Spacer) : fond du type principal, taches du second type (du même type pour un mono-type), 324 combinaisons ; œuf spécial pour Manaphy ; œuf par défaut pour un type inconnu.
 - Sablier d'Argent : -25 % du temps de ponte restant, ou des pas restants d'un œuf (mode réglable). Sablier d'Or : ponte ou éclosion immédiate. Sur un œuf, clic droit avec le sablier sur l'œuf dans l'inventaire (ou sablier en main, œuf en main secondaire) ; sur une Pension, bouton dans l'écran.
 - Drops comme dans Pixelmon (`drops.json`) : Nœud Destin lâché par Chaglam et Chaffreux (10 %), Pierre Stase lâchée par Leuphorie (10 %), à la capture, à la victoire et à la mort. Racaillou, Gravalanch, Nodulithe, Géolithe et Gigalithe tiennent une Pierre Stase une fois sur 20 quand on les capture.
+- **Capsules d'Argent et d'Or** (Entraînement Ultime, textures fournies par Spacer) : sur un Pokémon de l'équipe au niveau 100 (`bottle_caps.min_level`, plafonné au niveau max de Cobblemon). La Capsule d'Argent monte une statistique au choix à 31, la Capsule d'Or toutes. Comme dans les jeux, c'est **31 en combat seulement** : l'IV d'origine ne change pas et c'est lui que la reproduction transmet (Nœud Destin, objets Pouvoir). Utilise le stockage natif de Cobblemon (calcul des statistiques, combats, événements `HYPER_TRAINED_IV`). Clic droit avec la capsule (choix du Pokémon dans le chat, puis de la statistique pour l'Argent) ou `/capsule`. Visible au GTS, dans `/breed` et dans les écrans de la Pension. Impossible en combat. Objets à distribuer via Crates, BattlePass ou Battle Tower : `cobblepulse_ranch:silver_bottle_cap`, `cobblepulse_ranch:gold_bottle_cap`.
 - **Castration** : `/castrer <emplacement>` puis `/castrer <emplacement> confirmer`, réservée au Dresseur d'Origine, définitive. Le Pokémon ne se reproduit plus et la mention « Castré » apparaît au GTS.
 
 ## GTS (CobblePulse Utils)
@@ -49,6 +50,7 @@ Utils lit deux points d'entrée du mod, sans dépendance de compilation : `cobbl
 | `/hatch` | Diagnostic de l'œuf tenu en main (chat) |
 | `/hatch instant` | VIP : éclosion immédiate de l'œuf en main |
 | `/eggsee` | Fiche complète de l'œuf en main (chat) |
+| `/capsule [empl.] [stat\|tout]` | Capsule en main : choix du Pokémon, de la statistique (`pv`, `attaque`, `defense`, `attaque_spe`, `defense_spe`, `vitesse`) ou `tout` pour la Capsule d'Or ; alias `/bottlecap` |
 | `/castrer <empl.> [confirmer]` | Castration (Dresseur d'Origine) ; alias `/neuter` |
 | `/pokegive egg <propriétés>` | Staff : œuf de n'importe quelle espèce (Cobblemon, mods, datapacks, Fakemons), avec les propriétés Cobblemon (`shiny=yes`, `nature=…`, `ability=…`, IV…) |
 | `/pokegive egg random` | Staff : œuf d'une espèce au hasard ; `random_reproductible` exclut le groupe Inconnu ; propriétés en plus possibles (`random shiny=yes`) |
@@ -56,19 +58,19 @@ Utils lit deux points d'entrée du mod, sans dépendance de compilation : `cobbl
 | `/cobbleranch guide` | Guide de la Pension |
 | `/cobbleranch admin` | Panneau d'administration |
 | `/cobbleranch reload` | Recharge `config/cobbleranch/` |
-| `/cobbleranch give <joueur> <objet> [n]` | Bloc, sabliers, encens |
+| `/cobbleranch give <joueur> <objet> [n]` | Bloc, sabliers, capsules, encens |
 | `/cobbleranch fertilite\|castration <joueur> <empl.> …` | Support staff |
 
 ## Permissions
-Nœuds du CDC (section 7.2), `cobbleranch.user.neuter` et `cobbleranch.command.pokegive.egg` (opérateurs par défaut ; `/pokegive` de Cobblemon garde sa propre permission). Sans valeur dans LuckPerms : `user.*` et les commandes de base sont permis à tous ; les nœuds VIP, `bypass.*` et `admin.*` sont réservés aux opérateurs (niveau `op_level_fallback`, 2 par défaut). Un refus explicite dans LuckPerms l'emporte. Dans le panneau admin, un bouton sans permission n'est pas affiché ; une action forcée sans permission est refusée, enregistrée dans le journal et signalée au staff en ligne.
+Nœuds du CDC (section 7.2), `cobbleranch.user.neuter`, `cobbleranch.command.capsule` (tous par défaut) et `cobbleranch.command.pokegive.egg` (opérateurs par défaut ; `/pokegive` de Cobblemon garde sa propre permission). Sans valeur dans LuckPerms : `user.*` et les commandes de base sont permis à tous ; les nœuds VIP, `bypass.*` et `admin.*` sont réservés aux opérateurs (niveau `op_level_fallback`, 2 par défaut). Un refus explicite dans LuckPerms l'emporte. Dans le panneau admin, un bouton sans permission n'est pas affiché ; une action forcée sans permission est refusée, enregistrée dans le journal et signalée au staff en ligne.
 
 ## Configuration (`config/cobbleranch/`)
-- `config.json` : clés du CDC, plus `max_ranch_blocks_per_player`, `max_eggs_per_slot`, `language`, `masuda_mode`, `regional_form_mother_chance` (0,30), `inheritable_form_keywords`, `non_inheritable_balls`, `blocked_species`/`blocked_labels`, `incense_babies`, `offspring_variants`, `steps_per_egg_cycle` (256), `steps_per_block`, `silver_hourglass_fixed_egg_steps`, `hatch_boost_abilities`, `remote_breed` (emplacements, durée, coût), `neutering`.
+- `config.json` : clés du CDC, plus `max_ranch_blocks_per_player`, `max_eggs_per_slot`, `language`, `masuda_mode`, `regional_form_mother_chance` (0,30), `inheritable_form_keywords`, `non_inheritable_balls`, `blocked_species`/`blocked_labels`, `incense_babies`, `offspring_variants`, `steps_per_egg_cycle` (256), `steps_per_block`, `silver_hourglass_fixed_egg_steps`, `hatch_boost_abilities`, `remote_breed` (emplacements, durée, coût), `neutering`, `bottle_caps` (`enabled`, `min_level` 100).
 - `habitat_blocks.json`, `drops.json`.
 
 ## Tests automatiques (GitHub Actions)
 - Vrai serveur (Cobblemon 1.8.4, LuckPerms, Mega Showdown, CobblePulse-Ecology, datapack d'espèces de test) : contenu, règles et génétique sur des centaines de tirages, habitat dans le monde, évaluation à la demande, persistance, anti-duplication, journal.
 - Arrêt brutal (`kill -9`) au milieu d'un dépôt, puis redémarrage : vérification qu'il n'y a pas de doublon.
-- Vrai client connecté : bloc, écrans, choix dans le PC, sabliers, œuf, `/eggsee`, `/hatch`, éclosion, `/breed`, `/daycare`, castration, `/pokegive egg`, Guide, admin.
+- Vrai client connecté : bloc, écrans, choix dans le PC, sabliers, œuf, `/eggsee`, `/hatch`, éclosion, `/breed`, `/daycare`, castration, `/pokegive egg`, Capsules d'Argent et d'Or, Guide, admin.
 
 Les résultats et le jar sont publiés sur la branche `ci-output`.

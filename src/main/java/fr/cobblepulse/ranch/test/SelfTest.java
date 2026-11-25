@@ -1,5 +1,7 @@
 package fr.cobblepulse.ranch.test;
 
+import com.cobblemon.mod.common.api.pokemon.stats.Stat;
+import fr.cobblepulse.ranch.service.BottleCaps;
 import com.cobblemon.mod.common.api.Priority;
 import com.cobblemon.mod.common.api.abilities.Abilities;
 import com.cobblemon.mod.common.api.moves.Moves;
@@ -160,6 +162,31 @@ public final class SelfTest {
             Genetics.Result r = Genetics.breed(c, new Random());
             p.getInventory().add(EggData.toStack(EggData.build(r.child(), r, "test")));
             return 1;
+        })))).then(literal("partyiv0").then(argument("joueur", EntityArgument.player()).then(argument("props", StringArgumentType.greedyString()).executes(ctx -> {
+            // Pokemon d'equipe aux IV d'origine tous a 0 (test des Capsules) ; equipe pleine : le dernier part au PC
+            ServerPlayer p = EntityArgument.getPlayer(ctx, "joueur");
+            Pokemon pk = mon(StringArgumentType.getString(ctx, "props"));
+            ivs(pk, 0);
+            pk.setOriginalTrainer(p.getUUID());
+            var party = Stores.party(p);
+            if (party.get(5) != null) {
+                Pokemon last = party.get(5);
+                party.remove(last);
+                Stores.pc(p).add(last);
+            }
+            party.add(pk);
+            ctx.getSource().sendSuccess(() -> Component.literal("[CobbleRanch] Equipe : " + pk.getSpecies().getName()), false);
+            return 1;
+        })))).then(literal("ivs").then(argument("joueur", EntityArgument.player()).then(argument("emplacement", com.mojang.brigadier.arguments.IntegerArgumentType.integer(1, 6)).executes(ctx -> {
+            Pokemon pk = Stores.party(EntityArgument.getPlayer(ctx, "joueur")).get(com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(ctx, "emplacement") - 1);
+            if (pk == null) return 0;
+            StringBuilder b = new StringBuilder("[CobbleRanch] IV base ");
+            for (int i = 0; i < 6; i++) b.append(i == 0 ? "" : "/").append(pk.getIvs().getOrDefault(Genetics.STATS[i]));
+            b.append(" combat ");
+            for (int i = 0; i < 6; i++) b.append(i == 0 ? "" : "/").append(pk.getIvs().getEffectiveBattleIV(Genetics.STATS[i]));
+            String msg = b.toString();
+            ctx.getSource().sendSuccess(() -> Component.literal(msg), false);
+            return 1;
         }))));
     }
 
@@ -185,6 +212,7 @@ public final class SelfTest {
         QUEUE.add(SelfTest::eggData);
         QUEUE.add(SelfTest::dropsAndNeuter);
         QUEUE.add(SelfTest::pokegiveEgg);
+        QUEUE.add(SelfTest::bottleCaps);
         QUEUE.add(SelfTest::performance);
         QUEUE.add(() -> {
             CobbleRanch.LOG.info(TAG + "SELFTEST SUMMARY: {} pass, {} fail", pass, fail);
@@ -819,6 +847,55 @@ public final class SelfTest {
                 && other.getChild("player").getChild("egg") != null, null);
         check("pokegive_permission_cobblemon_conservee", give != null && !give.canUse(anyone), null);
         check("pokegive_normal_intact", give != null && give.getChildren().size() >= 2, give == null ? "" : give.getChildren().size() + " enfants");
+    }
+
+    /** Capsules d'Argent / d'Or : 31 en combat, IV d'origine inchanges et seuls transmis en reproduction. */
+    static void bottleCaps() {
+        int lvl = BottleCaps.minLevel();
+        Stat atk = Genetics.STATS[1];
+        Pokemon low = mon("machop level=" + Math.max(1, lvl - 1));
+        ivs(low, 0);
+        check("capsule_niveau_requis", lvl <= 1 || BottleCaps.check(low, false, 1) != null, "niveau min " + lvl);
+        Pokemon m = mon("machop level=" + lvl);
+        ivs(m, 0);
+        int before = m.getStat(atk);
+        check("capsule_utilisable", BottleCaps.check(m, false, 1) == null && BottleCaps.check(m, true, -1) == null, null);
+        List<Integer> done = BottleCaps.apply(m, 1);
+        check("capsule_argent_31_en_combat", done.equals(List.of(1)) && m.getIvs().getEffectiveBattleIV(atk) == 31 && m.getIvs().getOrDefault(atk) == 0
+                && m.getStat(atk) > before, "stat " + before + " -> " + m.getStat(atk));
+        boolean others = true;
+        for (int i : new int[]{0, 2, 3, 4, 5}) others &= m.getIvs().getEffectiveBattleIV(Genetics.STATS[i]) == 0;
+        check("capsule_argent_une_seule_stat", others, null);
+        check("capsule_argent_deja_max", BottleCaps.check(m, false, 1) != null && BottleCaps.apply(m, 1).isEmpty(), null);
+        Pokemon re = new Pokemon().loadFromNBT(CobbleRanch.registries(), m.saveToNBT(CobbleRanch.registries(), new CompoundTag()));
+        check("capsule_persistance", re.getIvs().getEffectiveBattleIV(atk) == 31 && re.getIvs().getOrDefault(atk) == 0, null);
+        List<Integer> all = BottleCaps.apply(m, -1);
+        boolean full = all.size() == 5;
+        for (int i = 0; i < 6; i++) full &= m.getIvs().getEffectiveBattleIV(Genetics.STATS[i]) == 31 && m.getIvs().getOrDefault(Genetics.STATS[i]) == 0;
+        check("capsule_or_toutes", full && BottleCaps.check(m, true, -1) != null, all.toString());
+        check("capsule_noms_stats", BottleCaps.statIndex("attaque_spe") == 3 && BottleCaps.statIndex("Spe") == 5 && BottleCaps.statIndex("hp") == 0
+                && BottleCaps.statIndex("défense") == 2 && BottleCaps.statIndex("xyz") == -1, null);
+        Random r = new Random(11);
+        int minZeros = 6;
+        boolean clean = true;
+        for (int i = 0; i < 120; i++) {
+            Pokemon f = mon("machop gender=female level=" + lvl), ma = mon("machop gender=male level=" + lvl);
+            ivs(f, 0);
+            ivs(ma, 0);
+            BottleCaps.apply(f, -1);
+            BottleCaps.apply(ma, -1);
+            hold(ma, Traits.DESTINY_KNOT);
+            Pokemon c = Genetics.breed(pair(f, ma), r).child();
+            int zeros = 0;
+            for (int k = 0; k < 6; k++) if (c.getIvs().getOrDefault(Genetics.STATS[k]) == 0) zeros++;
+            minZeros = Math.min(minZeros, zeros);
+            clean &= c.getIvs().getHyperTrainedIVs().isEmpty();
+        }
+        check("capsule_reproduction_iv_origine", minZeros >= 5, "min " + minZeros + " IV d'origine (0) transmis sur 6");
+        check("capsule_jamais_heritee", clean, null);
+        check("capsule_ligne_gts", new fr.cobblepulse.ranch.compat.UtilsPokemonLines().apply(m).stream().anyMatch(s -> s.contains("Entraînement Ultime")), null);
+        check("capsule_objets", BuiltInRegistries.ITEM.getKey(ModContent.SILVER_BOTTLE_CAP).toString().equals("cobblepulse_ranch:silver_bottle_cap")
+                && BuiltInRegistries.ITEM.getKey(ModContent.GOLD_BOTTLE_CAP).toString().equals("cobblepulse_ranch:gold_bottle_cap"), null);
     }
 
     static void performance() {

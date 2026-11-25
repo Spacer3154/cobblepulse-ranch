@@ -19,5 +19,7 @@
   "tag.block.minecraft.logs": "Bûches",
   "tag.block.minecraft.wool": "Laine",
   "tag.block.minecraft.crops": "Cultures",
-  "tag.block.minecraft.beds": "Lits"
+  "tag.block.minecraft.beds": "Lits",
+  "item.cobblepulse_ranch.silver_bottle_cap": "Capsule d'Argent",
+  "item.cobblepulse_ranch.gold_bottle_cap": "Capsule d'Or"
 }

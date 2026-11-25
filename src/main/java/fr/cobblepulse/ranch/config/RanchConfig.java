@@ -20,6 +20,8 @@ public final class RanchConfig {
     public RemoteBreed remote_breed = new RemoteBreed();
     /** ajout : castration par le Dresseur d'Origine. */
     public Neuter neutering = new Neuter();
+    /** ajout : Capsules d'Argent et d'Or (Entrainement Ultime : 31 en combat, IV d'origine transmis en reproduction). */
+    public BottleCaps bottle_caps = new BottleCaps();
 
     public static final class General {
         public int max_ranch_blocks_per_chunk = -1;
@@ -103,6 +105,12 @@ public final class RanchConfig {
         public int duration_seconds = 3600;
         /** cout par lancement (0 = gratuit) ; paye via l'economie de CobblePulse Utils si presente. */
         public long cost = 0;
+    }
+
+    public static final class BottleCaps {
+        public boolean enabled = true;
+        /** niveau minimum (100 comme dans Pixelmon et les jeux ; plafonne au niveau maximum de Cobblemon). */
+        public int min_level = 100;
     }
 
     public static final class Neuter {

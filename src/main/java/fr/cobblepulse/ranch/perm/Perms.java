@@ -26,6 +26,7 @@ public final class Perms {
     public static final String CMD_HATCH = "cobbleranch.command.hatch";
     public static final String CMD_HATCH_VIP = "cobbleranch.command.hatch.vip";
     public static final String CMD_EGGSEE = "cobbleranch.command.eggsee";
+    public static final String CMD_CAPSULE = "cobbleranch.command.capsule";
     public static final String BYPASS_CHUNK = "cobbleranch.bypass.chunk_limit";
     public static final String BYPASS_FERTILITY = "cobbleranch.bypass.fertility";
     public static final String BYPASS_COOLDOWN = "cobbleranch.bypass.cooldown";
@@ -44,7 +45,7 @@ public final class Perms {
     public static final Map<String, Boolean> DEFAULTS = new LinkedHashMap<>();
 
     static {
-        for (String n : new String[]{USE, HOURGLASS_SILVER, HOURGLASS_GOLD, NEUTER, CMD_DAYCARE, CMD_BREED, CMD_HATCH, CMD_EGGSEE}) DEFAULTS.put(n, true);
+        for (String n : new String[]{USE, HOURGLASS_SILVER, HOURGLASS_GOLD, NEUTER, CMD_DAYCARE, CMD_BREED, CMD_HATCH, CMD_EGGSEE, CMD_CAPSULE}) DEFAULTS.put(n, true);
         for (String n : new String[]{CMD_DAYCARE_REMOTE, CMD_BREED_VIP, CMD_HATCH_VIP, BYPASS_CHUNK, BYPASS_FERTILITY, BYPASS_COOLDOWN,
                 ADMIN_GUI, ADMIN_VIEW, ADMIN_MODIFY, ADMIN_CANCEL, ADMIN_DELETE, ADMIN_GLOBAL_MODIFY, ADMIN_GLOBAL_CANCEL,
                 ADMIN_GLOBAL_DELETE, ADMIN_RULES_DITTO, ADMIN_RULES_OVERRIDE}) DEFAULTS.put(n, false);

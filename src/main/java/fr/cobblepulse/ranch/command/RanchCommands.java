@@ -127,10 +127,25 @@ public final class RanchCommands {
                             .then(literal("confirmer").executes(ctx -> run(ctx, p -> neuter(p, IntegerArgumentType.getInteger(ctx, "emplacement"), true))))));
         }
 
+        // ---------------- /capsule [emplacement] [stat|tout] [id]  (alias /bottlecap)
+        for (String name : new String[]{"capsule", "bottlecap"}) {
+            d.register(literal(name).requires(s -> Perms.has(s, Perms.CMD_CAPSULE))
+                    .executes(ctx -> run(ctx, fr.cobblepulse.ranch.service.BottleCaps::partyMenu))
+                    .then(argument("emplacement", IntegerArgumentType.integer(1, 6))
+                            .executes(ctx -> run(ctx, p -> fr.cobblepulse.ranch.service.BottleCaps.use(p, IntegerArgumentType.getInteger(ctx, "emplacement"), null, null)))
+                            .then(argument("stat", StringArgumentType.word())
+                                    .suggests((c, b) -> SharedSuggestionProvider.suggest(capStats(), b))
+                                    .executes(ctx -> run(ctx, p -> fr.cobblepulse.ranch.service.BottleCaps.use(p, IntegerArgumentType.getInteger(ctx, "emplacement"),
+                                            StringArgumentType.getString(ctx, "stat"), null)))
+                                    .then(argument("id", StringArgumentType.word())
+                                            .executes(ctx -> run(ctx, p -> fr.cobblepulse.ranch.service.BottleCaps.use(p, IntegerArgumentType.getInteger(ctx, "emplacement"),
+                                                    StringArgumentType.getString(ctx, "stat"), StringArgumentType.getString(ctx, "id"))))))));
+        }
+
         // ---------------- /cobbleranch
         LiteralArgumentBuilder<CommandSourceStack> root = literal("cobbleranch")
                 .executes(ctx -> run(ctx, p -> {
-                    Msg.info(p, "CobblePulse Ranch " + CobbleRanch.version() + " — /daycare, /breed, /hatch, /eggsee, /castrer, /cobbleranch guide");
+                    Msg.info(p, "CobblePulse Ranch " + CobbleRanch.version() + " — /daycare, /breed, /hatch, /eggsee, /castrer, /capsule, /cobbleranch guide");
                     return 1;
                 }))
                 .then(literal("guide").executes(ctx -> run(ctx, p -> {
@@ -224,6 +239,13 @@ public final class RanchCommands {
                     + (stone ? " | nature transmise (Pierre Stase)" : " | nature aléatoire")
                     + " | talent de la mère : " + Math.round(cfg.genetics.mother_ability_inheritance_chance * 100) + " %"
                     + (Genetics.isHidden(c.mother()) ? " (talent caché possible)" : " (pas de talent caché)")));
+            List<String> caps = new ArrayList<>();
+            for (Pokemon x : new Pokemon[]{a, b}) {
+                String h = fr.cobblepulse.ranch.service.BottleCaps.hyperLabel(x);
+                if (!h.isEmpty()) caps.add(RanchService.label(x) + " (" + h + ")");
+            }
+            if (!caps.isEmpty())
+                p.sendSystemMessage(line("Capsules", String.join(", ", caps) + " : 31 en combat seulement, ce sont les IV d'origine qui sont transmis"));
             boolean masuda = Genetics.masuda(c.mother(), c.father());
             p.sendSystemMessage(line("Chromatique", (masuda ? Math.round(cfg.genetics.masuda_shiny_multiplier) + "/" : "1/") + cfg.genetics.base_shiny_rate
                     + (masuda ? " (méthode Masuda)" : "")));
@@ -427,8 +449,14 @@ public final class RanchCommands {
 
     // ================================================================================================= staff
 
+    private static List<String> capStats() {
+        List<String> l = new ArrayList<>(List.of(fr.cobblepulse.ranch.service.BottleCaps.KEYS));
+        l.add(fr.cobblepulse.ranch.service.BottleCaps.ALL);
+        return l;
+    }
+
     private static List<String> giveIds() {
-        List<String> l = new ArrayList<>(List.of("ranch_block", "silver_hourglass", "gold_hourglass"));
+        List<String> l = new ArrayList<>(List.of("ranch_block", "silver_hourglass", "gold_hourglass", "silver_bottle_cap", "gold_bottle_cap"));
         for (String s : ModContent.INCENSES) l.add(s + "_incense");
         return l;
     }
