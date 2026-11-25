@@ -136,10 +136,10 @@ public final class BottleCaps {
             String err = check(pk, gold, -1);
             MutableComponent line = Component.literal("  [" + (s + 1) + "] " + RanchService.label(pk) + " Niv. " + pk.getLevel());
             if (err == null) {
-                String cmd = gold ? "/capsule " + (s + 1) + " " + ALL + " " + idOf(pk) : "/capsule " + (s + 1);
+                String cmd = "/capsule " + (s + 1);
                 line = line.withStyle(st -> st.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, cmd))
                         .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal(gold
-                                ? "Monter toutes ses statistiques à 31 en combat" : "Choisir la statistique"))));
+                                ? "Ouvrir l'Entraînement Ultime (toutes les statistiques)" : "Ouvrir l'Entraînement Ultime (choix de la statistique)"))));
                 line.append(Component.literal("  " + trainableStats(pk).size() + " stat(s) à entraîner").withStyle(ChatFormatting.DARK_GREEN));
             } else {
                 line = line.withStyle(ChatFormatting.DARK_GRAY);
@@ -190,7 +190,7 @@ public final class BottleCaps {
             Msg.err(p, err);
             return 0;
         }
-        if (!gold && stat < 0) return statMenu(p, slot, pk);
+        if (statArg == null || statArg.isEmpty()) return openScreen(p, slot, pk, gold, "", true);
         List<Integer> done = apply(pk, gold ? -1 : stat);
         if (done.isEmpty()) {
             Msg.err(p, "L'Entraînement Ultime de " + RanchService.label(pk) + " a été refusé.");
@@ -214,27 +214,62 @@ public final class BottleCaps {
         return 1;
     }
 
-    /** Capsule d'Argent : boutons des six statistiques. */
-    static int statMenu(ServerPlayer p, int slot, Pokemon pk) {
-        Msg.send(p, Component.literal("Capsule d'Argent — quelle statistique de " + RanchService.label(pk) + " monter à 31 en combat ?").withStyle(ChatFormatting.YELLOW));
-        MutableComponent row = Component.literal("  ");
-        for (int k = 0; k < 6; k++) {
-            final int i = k;
+    /** Ecran de l'Entrainement Ultime (Argent : choix de la statistique ; Or : confirmation). */
+    public static int openScreen(ServerPlayer p, int slot, Pokemon pk, boolean gold, String flash, boolean ok) {
+        com.google.gson.JsonObject o = new com.google.gson.JsonObject();
+        o.addProperty("slot", slot);
+        o.addProperty("id", idOf(pk));
+        o.addProperty("name", RanchService.label(pk));
+        o.addProperty("species_key", fr.cobblepulse.ranch.util.Names.speciesKey(pk.getSpecies()));
+        o.addProperty("level", pk.getLevel());
+        o.addProperty("gold", gold);
+        InteractionHand hand = capHand(p);
+        o.addProperty("count", hand == null ? 0 : p.getItemInHand(hand).getCount());
+        o.addProperty("flash", flash);
+        o.addProperty("flash_ok", ok);
+        com.google.gson.JsonArray a = new com.google.gson.JsonArray();
+        for (int i = 0; i < 6; i++) {
+            com.google.gson.JsonObject j = new com.google.gson.JsonObject();
             Stat st = Genetics.STATS[i];
-            int base = pk.getIvs().getOrDefault(st), eff = pk.getIvs().getEffectiveBattleIV(st);
-            MutableComponent b = Component.literal("[" + SHORT[i] + " " + eff + "]");
-            if (trainable(pk, i)) {
-                String cmd = "/capsule " + slot + " " + KEYS[i] + " " + idOf(pk);
-                b = b.withStyle(s -> s.withColor(ChatFormatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, cmd))
-                        .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal(NAMES[i] + " : " + eff + " → 31 en combat.\n"
-                                + "La reproduction transmettra toujours l'IV d'origine (" + base + ")."))));
-            } else {
-                b = b.withStyle(s -> s.withColor(ChatFormatting.DARK_GRAY).withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
-                        Component.literal(NAMES[i] + " : déjà 31 en combat" + (base < IVs.MAX_VALUE ? " (IV d'origine " + base + ")" : "")))));
-            }
-            row.append(b).append(Component.literal(" "));
+            j.addProperty("key", KEYS[i]);
+            j.addProperty("name", NAMES[i]);
+            j.addProperty("base", pk.getIvs().getOrDefault(st));
+            j.addProperty("eff", pk.getIvs().getEffectiveBattleIV(st));
+            j.addProperty("trainable", trainable(pk, i));
+            a.add(j);
         }
-        p.sendSystemMessage(row);
+        o.add("stats", a);
+        fr.cobblepulse.ranch.net.RanchNet.send(p, "capsule", o);
         return 1;
+    }
+
+    /** Clic droit sur un Pokemon sorti avec une capsule : l'ecran s'ouvre pour ce Pokemon. */
+    public static void onPokemon(ServerPlayer p, com.cobblemon.mod.common.entity.pokemon.PokemonEntity pe) {
+        Pokemon pk = pe.getPokemon();
+        if (!p.getUUID().equals(pk.getOwnerUUID())) {
+            Msg.err(p, "Ce Pokémon n'est pas à toi.");
+            return;
+        }
+        PlayerPartyStore party = Stores.party(p);
+        for (int s = 0; s < 6; s++) {
+            Pokemon q = party.get(s);
+            if (q != null && q.getUuid().equals(pk.getUuid())) {
+                use(p, s + 1, null, null);
+                return;
+            }
+        }
+        Msg.err(p, "La Capsule s'utilise sur un Pokémon de ton équipe.");
+    }
+
+    /** Bouton de l'ecran : applique, puis rafraichit l'ecran (autre capsule en main) ou le ferme. */
+    public static void screenAction(ServerPlayer p, int slot, String stat, String id) {
+        int r = use(p, slot, stat, id);
+        Pokemon pk = Stores.party(p).get(slot - 1);
+        InteractionHand hand = capHand(p);
+        if (r > 0 && pk != null && hand != null && check(pk, ((BottleCapItem) p.getItemInHand(hand).getItem()).gold(), -1) == null) {
+            openScreen(p, slot, pk, ((BottleCapItem) p.getItemInHand(hand).getItem()).gold(), "Entraînement Ultime réussi !", true);
+            return;
+        }
+        fr.cobblepulse.ranch.net.RanchNet.send(p, "capsule_close", new com.google.gson.JsonObject());
     }
 }

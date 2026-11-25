@@ -117,6 +117,15 @@ final class LiveTest {
         mc.player.connection.send(new net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket(hb));
     }
 
+    /** Machop de niveau 100 du joueur, sorti dans le monde. */
+    private static com.cobblemon.mod.common.entity.pokemon.PokemonEntity capEntity(Minecraft mc) {
+        for (var e : mc.level.entitiesForRendering()) {
+            if (e instanceof com.cobblemon.mod.common.entity.pokemon.PokemonEntity pe && mc.player.getUUID().equals(pe.getOwnerUUID())
+                    && pe.getPokemon().getSpecies().getName().equalsIgnoreCase("machop") && pe.distanceTo(mc.player) < 24) return pe;
+        }
+        return null;
+    }
+
     /** IV vus par le client (synchronisation de Cobblemon), pour le detail des tests. */
     private static String clientIvs(int slot) {
         try {
@@ -572,17 +581,33 @@ final class LiveTest {
         until("capsule_menu", 200, mc -> chatHas("choisis un Pokémon"));
         add(10, mc -> {
             check("capsule_menu_equipe", chatHas("Machop"), lastChat());
-            CHAT.clear();
-            cmd(mc, "capsule " + capSlot);
+            // sort Machop de sa Poke Ball (comme la touche R de Cobblemon)
+            new com.cobblemon.mod.common.net.messages.server.SendOutPokemonPacket(capSlot - 1).sendToServer();
         });
-        until("capsule_choix_stat", 200, mc -> chatHas("quelle statistique"));
+        until("machop_sorti", 300, mc -> capEntity(mc) != null);
+        add(20, mc -> {
+            var e = capEntity(mc);
+            cmd(mc, "tp " + e.getStringUUID() + " " + String.format(java.util.Locale.ROOT, "%.2f %.2f %.2f", mc.player.getX() + 1.2, mc.player.getY(), mc.player.getZ()));
+        });
+        add(20, mc -> {
+            var e = capEntity(mc);
+            if (e != null) mc.gameMode.interactAt(mc.player, e, new net.minecraft.world.phys.EntityHitResult(e, e.position().add(0, 0.5, 0)),
+                    net.minecraft.world.InteractionHand.MAIN_HAND);
+        });
+        until("capsule_ecran_clic_droit", 200, mc -> mc.screen instanceof CapsuleScreen);
+        add(20, mc -> {
+            boolean ok = mc.screen instanceof CapsuleScreen c && !c.gold();
+            check("capsule_clic_droit_ouvre_ecran", ok, mc.screen == null ? "aucun ecran" : mc.screen.getClass().getSimpleName());
+            shot(mc, "live_12_capsule_argent_ecran");
+        });
         add(10, mc -> {
-            CHAT.clear();
-            cmd(mc, "capsule " + capSlot + " attaque");
+            boolean pressed = mc.screen instanceof CapsuleScreen c && c.press("stat_attaque");
+            check("capsule_bouton_attaque", pressed, null);
         });
         until("capsule_argent", 200, mc -> chatHas("Entraînement Ultime"));
-        add(10, mc -> {
+        add(20, mc -> {
             check("capsule_argent_consommee", find(mc, ModContent.SILVER_BOTTLE_CAP) < 0, null);
+            check("capsule_ecran_ferme_sans_capsule", !(mc.screen instanceof CapsuleScreen), null);
             CHAT.clear();
             cmd(mc, "cobbleranch selftest ivs " + mc.player.getGameProfile().getName() + " " + capSlot);
         });
@@ -591,17 +616,26 @@ final class LiveTest {
             check("capsule_argent_attaque_31", chatHas("base 0/0/0/0/0/0 combat 0/31/0/0/0/0"), lastChat() + clientIvs(capSlot));
             mc.setScreen(new net.minecraft.client.gui.screens.ChatScreen(""));
         });
-        add(20, mc -> shot(mc, "live_12_capsule_argent"));
+        add(20, mc -> shot(mc, "live_12b_capsule_argent_chat"));
         add(10, mc -> {
             mc.setScreen(null);
             toHotbar(mc, ModContent.GOLD_BOTTLE_CAP, 6);
         });
         add(20, mc -> {
             CHAT.clear();
-            cmd(mc, "capsule " + capSlot + " tout");
+            cmd(mc, "capsule " + capSlot);
+        });
+        until("capsule_ecran_or", 200, mc -> mc.screen instanceof CapsuleScreen);
+        add(20, mc -> {
+            check("capsule_ecran_or", mc.screen instanceof CapsuleScreen c && c.gold(), null);
+            shot(mc, "live_13_capsule_or_ecran");
+        });
+        add(10, mc -> {
+            boolean pressed = mc.screen instanceof CapsuleScreen c && c.press("gold");
+            check("capsule_bouton_or", pressed, null);
         });
         until("capsule_or", 200, mc -> chatHas("Entraînement Ultime"));
-        add(10, mc -> {
+        add(20, mc -> {
             check("capsule_or_consommee", find(mc, ModContent.GOLD_BOTTLE_CAP) < 0, null);
             CHAT.clear();
             cmd(mc, "cobbleranch selftest ivs " + mc.player.getGameProfile().getName() + " " + capSlot);
@@ -615,6 +649,7 @@ final class LiveTest {
         until("capsule_refus", 200, mc -> chatHas("Capsule d'Argent ou une Capsule d'Or") || chatHas("déjà au maximum"));
         add(10, mc -> {
             check("capsule_sans_objet_refusee", chatHas("Capsule d'Argent ou une Capsule d'Or"), lastChat());
+            new com.cobblemon.mod.common.net.messages.server.SendOutPokemonPacket(capSlot - 1).sendToServer();
             mc.setScreen(new net.minecraft.client.gui.screens.ChatScreen(""));
         });
         add(20, mc -> shot(mc, "live_13_capsule_or"));

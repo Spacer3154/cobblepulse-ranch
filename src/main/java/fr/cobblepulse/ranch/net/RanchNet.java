@@ -111,6 +111,8 @@ public final class RanchNet {
                 }
                 case "daycare_open" -> daycareOpen(p, uuid(o, "ranch"));
                 case "admin" -> AdminService.action(p, o);
+                case "capsule" -> fr.cobblepulse.ranch.service.BottleCaps.screenAction(p, o.has("slot") ? o.get("slot").getAsInt() : 0,
+                        o.has("stat") ? o.get("stat").getAsString() : "", o.has("id") ? o.get("id").getAsString() : "");
                 default -> {
                 }
             }

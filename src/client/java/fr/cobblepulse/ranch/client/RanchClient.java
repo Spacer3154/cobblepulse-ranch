@@ -64,6 +64,10 @@ public final class RanchClient implements ClientModInitializer {
                     mc.setScreen(new PickerScreen(o, back));
                 }
                 case "guide" -> mc.setScreen(new GuideScreen(o, mc.screen));
+                case "capsule" -> mc.setScreen(new CapsuleScreen(o));
+                case "capsule_close" -> {
+                    if (mc.screen instanceof CapsuleScreen) mc.setScreen(null);
+                }
                 case "daycare" -> mc.setScreen(new DaycareScreen(o));
                 case "admin" -> {
                     if (mc.screen instanceof AdminScreen as) as.update(o);

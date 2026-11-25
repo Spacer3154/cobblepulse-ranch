@@ -88,7 +88,7 @@ public final class GuideScreen extends RanchUi {
         if (!data.has("caps_on") || data.get("caps_on").getAsBoolean())
             p.add(new String[]{"Capsules", "Capsule d'Argent (une statistique) et Capsule d'Or (toutes) : Entraînement Ultime d'un Pokémon de l'équipe au niveau "
                     + num(data, "caps_level") + ". Ses statistiques passent à 31 en combat, mais ses IV d'origine ne changent pas : "
-                    + "ce sont eux que la reproduction transmet. Clic droit avec la capsule, ou /capsule."});
+                    + "ce sont eux que la reproduction transmet. Clic droit sur ton Pokémon avec la capsule pour ouvrir l'écran de choix, ou /capsule."});
         p.add(new String[]{"Nature et forme", "Pierre Stase : nature du porteur garantie (deux porteurs : 50/50) et sa forme régionale aussi. Sans Pierre Stase : "
                 + "deux parents de la même forme régionale donnent cette forme ; sinon " + Math.round(data.get("regional").getAsDouble() * 100) + " " + pct
                 + " de chances d'avoir la forme de la mère."});

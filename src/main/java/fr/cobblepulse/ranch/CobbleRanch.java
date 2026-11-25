@@ -43,6 +43,7 @@ import java.util.Map;
 
 /** CobblePulse Ranch : Pension et reproduction des Pokemon (Minecraft 1.21.1, Fabric, Cobblemon 1.8.4). */
 public final class CobbleRanch implements ModInitializer {
+    private static final java.util.Map<java.util.UUID, Long> CAP_CLICK = new java.util.concurrent.ConcurrentHashMap<>();
     public static final String MOD_ID = "cobblepulse_ranch";
     public static final Logger LOG = LoggerFactory.getLogger("CobblePulse-Ranch");
     private static MinecraftServer server;
@@ -72,6 +73,17 @@ public final class CobbleRanch implements ModInitializer {
         Drops.load();
         Drops.register();
         CommandRegistrationCallback.EVENT.register((d, ctx, env) -> RanchCommands.register(d));
+        // Capsules : clic droit sur son Pokemon sorti -> ecran (avant l'interaction de Cobblemon)
+        net.fabricmc.fabric.api.event.player.UseEntityCallback.EVENT.register((player, level, hand, entity, hit) -> {
+            if (!(player.getItemInHand(hand).getItem() instanceof fr.cobblepulse.ranch.item.BottleCapItem)
+                    || !(entity instanceof com.cobblemon.mod.common.entity.pokemon.PokemonEntity pe)) return net.minecraft.world.InteractionResult.PASS;
+            if (player instanceof net.minecraft.server.level.ServerPlayer sp) {
+                long now = sp.server.getTickCount();
+                Long last = CAP_CLICK.put(sp.getUUID(), now);
+                if (last == null || now - last > 5) fr.cobblepulse.ranch.service.BottleCaps.onPokemon(sp, pe);
+            }
+            return net.minecraft.world.InteractionResult.SUCCESS;
+        });
         // /pokegive egg : apres les commandes de Cobblemon (phase tardive), pour se greffer sur ses noeuds
         ResourceLocation late = id("after_cobblemon");
         CommandRegistrationCallback.EVENT.addPhaseOrdering(net.fabricmc.fabric.api.event.Event.DEFAULT_PHASE, late);
