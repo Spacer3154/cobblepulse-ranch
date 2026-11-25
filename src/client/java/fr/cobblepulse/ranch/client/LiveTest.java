@@ -163,8 +163,9 @@ final class LiveTest {
                 g.renderItem(eggs.get(i), 0, 0);
                 g.pose().popPose();
                 CompoundTag info = eggs.get(i).get(ModContent.EGG_DATA).getCompound("info");
-                String label = info.getString("species").endsWith("manaphy") ? "manaphy" : info.getString("type1").substring(0, Math.min(4, info.getString("type1").length()))
-                        + (info.getString("type2").isEmpty() ? "" : "/" + info.getString("type2").substring(0, 4));
+                String t1 = info.getString("type1"), t2 = info.getString("type2");
+                String label = info.getString("species").endsWith("manaphy") ? "manaphy"
+                        : t1.substring(0, Math.min(4, t1.length())) + (t2.isEmpty() ? "" : "/" + t2.substring(0, Math.min(4, t2.length())));
                 g.drawString(font, label, 10 + col * 40, 58 + row * 44, 0xCCCCCC);
             }
         }
