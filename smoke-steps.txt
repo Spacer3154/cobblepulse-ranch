@@ -1,0 +1,45 @@
+mod fabric-api 0.116.18+1.21.1
+mod fabric-language-kotlin 1.14.2+kotlin.2.4.21
+mod luckperms v5.4.140-fabric
+mod cobblemon 1.8.4F
+mod cobblemon-mega-showdown 1.4+1.8.4+1.21.1-release
+mod architectury-api 13.0.12+fabric
+mod owo-lib 0.13.0-alpha.15.1+1.21
+mod accessories 1.1.0-beta.54+1.21.1
+mod cobblepulse-ecology-3.10.2+mc1.21.1.jar
+mod cobblepulse-utils.jar
+mod ranch build/libs/cobblepulse-ranch-1.0.0.jar
+datapack d'especes de test : cree
+===== run 1 =====
+server ready: True
+> cobbleranch selftest
+waiting for: SELFTEST DONE -> True
+> save-all flush
+> cobbleranch selftest crash
+waiting for: CRASH READY -> True
+ARRET BRUTAL (kill -9)
+[1] [10:41:48] [Server thread/INFO]: [CobblePulse-Ranch] OK : 1055 especes chargees (895 peuvent se reproduire), 0 pension(s)
+[1] [10:41:57] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu DEPOSIT 0b3f709e-25d5-4278-82ef-1d05d3e06ff4 (PC -> RANCH) : doublon retire de la destination
+[1] [10:41:57] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu WITHDRAW ef09a5a4-bbc7-43c8-a581-edd15ee4c2a9 (RANCH -> PC) : copie du journal remise a l'origine
+[1] [10:41:57] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu DEPOSIT 53212947-23ac-4a06-81ae-2e390eaab451 (PC -> RANCH) : transfert termine conserve
+[1] [10:41:59] [Server thread/INFO]: [CobblePulse-Ranch][selftest] SELFTEST SUMMARY: 146 pass, 0 fail
+exit code -9
+===== run 2 =====
+server ready: True
+> cobbleranch selftest crashcheck
+waiting for: CRASHCHECK DONE -> True
+> cobbleranch selftest persistcheck
+waiting for: PERSISTCHECK DONE -> True
+> cobbleranch reload
+> cobbleranch selftest
+waiting for: SELFTEST DONE -> True
+[2] [10:42:44] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu DEPOSIT f8b00a67-ee97-4fda-80de-6118c9d4d5ea (PC -> RANCH) : doublon retire de la destination
+[2] [10:42:44] [Server thread/INFO]: [CobblePulse-Ranch] OK : 1055 especes chargees (895 peuvent se reproduire), 2 pension(s)
+[2] [10:42:48] [Server thread/INFO]: [CobblePulse-Ranch][selftest] PASS arret_brutal_sans_doublon - PC 1 / Pension 0 / journal 0
+[2] [10:42:50] [Server thread/INFO]: [CobblePulse-Ranch][selftest] PASS persistance_apres_redemarrage - 2 pension(s), fichiers true
+[2] [10:42:50] [Server thread/INFO]: [CobblePulse-Ranch][selftest] PASS journal_vide_au_demarrage - 0
+[2] [10:42:57] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu DEPOSIT a25fb6ec-180f-4adb-a734-9b1eabe974f2 (PC -> RANCH) : doublon retire de la destination
+[2] [10:42:57] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu WITHDRAW 91e837b8-7d69-4496-a897-36187c73c94d (RANCH -> PC) : copie du journal remise a l'origine
+[2] [10:42:57] [Server thread/WARN]: [CobblePulse-Ranch] Transfert interrompu DEPOSIT d576a42a-bdbd-490e-9da1-69cb133e4a18 (PC -> RANCH) : transfert termine conserve
+[2] [10:42:58] [Server thread/INFO]: [CobblePulse-Ranch][selftest] SELFTEST SUMMARY: 146 pass, 0 fail
+exit code 0

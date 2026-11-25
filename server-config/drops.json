@@ -1,0 +1,69 @@
+{
+  "enabled": true,
+  "kill_requires_player": true,
+  "drops": [
+    {
+      "species": "glameow",
+      "item": "cobblemon:destiny_knot",
+      "chance": 0.1,
+      "min": 1,
+      "max": 1,
+      "on": [
+        "capture",
+        "defeat",
+        "kill"
+      ]
+    },
+    {
+      "species": "purugly",
+      "item": "cobblemon:destiny_knot",
+      "chance": 0.1,
+      "min": 1,
+      "max": 1,
+      "on": [
+        "capture",
+        "defeat",
+        "kill"
+      ]
+    },
+    {
+      "species": "blissey",
+      "item": "cobblemon:everstone",
+      "chance": 0.1,
+      "min": 1,
+      "max": 1,
+      "on": [
+        "capture",
+        "defeat",
+        "kill"
+      ]
+    }
+  ],
+  "held_on_capture": [
+    {
+      "species": "geodude",
+      "item": "cobblemon:everstone",
+      "chance": 0.05
+    },
+    {
+      "species": "graveler",
+      "item": "cobblemon:everstone",
+      "chance": 0.05
+    },
+    {
+      "species": "roggenrola",
+      "item": "cobblemon:everstone",
+      "chance": 0.05
+    },
+    {
+      "species": "boldore",
+      "item": "cobblemon:everstone",
+      "chance": 0.05
+    },
+    {
+      "species": "gigalith",
+      "item": "cobblemon:everstone",
+      "chance": 0.05
+    }
+  ]
+}

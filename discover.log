@@ -1,0 +1,8 @@
+cobblemon: ['1.8.4F', '1.8.3F', '1.8.2', '1.8.1', '1.8.0']
+fabric-api: ['0.116.18+1.21.1', '0.116.17+1.21.1', '0.116.16+1.21.1', '0.116.15+1.21.1', '0.116.14+1.21.1']
+fabric-language-kotlin: ['1.14.2+kotlin.2.4.21', '1.14.1+kotlin.2.4.20', '1.14.0+kotlin.2.4.20', '1.13.14+kotlin.2.4.20', '1.13.13+kotlin.2.4.10']
+luckperms: ['v5.4.140-fabric', 'v5.4.139-fabric']
+cobblemon-mega-showdown: ['1.4+1.8.4+1.21.1-release', '1.3.3+1.8.4+1.21.1-release', '1.3.2+1.8.2+1.21.1-release', '1.3.1+1.8.2+1.21.1-release', '1.3.1+1.8.2+1.21.1-release']
+dep mega showdown architectury-api: ['13.0.12+fabric', '13.0.11+fabric', '13.0.8+fabric']
+dep mega showdown owo-lib: ['0.13.0-alpha.15.1+1.21', '0.13.0-alpha.15+1.21', '0.12.15.4+1.21']
+dep mega showdown accessories: ['1.1.0-beta.54+1.21.1', '1.1.0-beta.53+1.21.1', '1.1.0-beta.52+1.21.1']

@@ -1,0 +1,465 @@
+{
+  "water1": [
+    {
+      "block": "minecraft:water",
+      "points": 1,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:lily_pad",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:kelp",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:seagrass",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "#minecraft:coral_blocks",
+      "points": 4,
+      "max_points": 16
+    },
+    {
+      "block": "minecraft:sea_lantern",
+      "points": 4,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:prismarine",
+      "points": 4,
+      "max_points": 12
+    }
+  ],
+  "water2": [
+    {
+      "block": "minecraft:water",
+      "points": 1,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:lily_pad",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:kelp",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:seagrass",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "#minecraft:coral_blocks",
+      "points": 4,
+      "max_points": 16
+    },
+    {
+      "block": "minecraft:sea_lantern",
+      "points": 4,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:prismarine",
+      "points": 4,
+      "max_points": 12
+    }
+  ],
+  "water3": [
+    {
+      "block": "minecraft:water",
+      "points": 1,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:lily_pad",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:kelp",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:seagrass",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "#minecraft:coral_blocks",
+      "points": 4,
+      "max_points": 16
+    },
+    {
+      "block": "minecraft:sea_lantern",
+      "points": 4,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:prismarine",
+      "points": 4,
+      "max_points": 12
+    }
+  ],
+  "grass": [
+    {
+      "block": "minecraft:grass_block",
+      "points": 1,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:moss_block",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:flowering_azalea",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:spore_blossom",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:oak_leaves",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:tall_grass",
+      "points": 2,
+      "max_points": 10
+    }
+  ],
+  "dragon": [
+    {
+      "block": "minecraft:obsidian",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:crying_obsidian",
+      "points": 3,
+      "max_points": 15
+    },
+    {
+      "block": "minecraft:end_stone",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:magma_block",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:gold_block",
+      "points": 4,
+      "max_points": 12
+    }
+  ],
+  "monster": [
+    {
+      "block": "minecraft:stone",
+      "points": 1,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:mossy_cobblestone",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:bone_block",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:dripstone_block",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:pointed_dripstone",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:dead_bush",
+      "points": 2,
+      "max_points": 8
+    }
+  ],
+  "bug": [
+    {
+      "block": "#minecraft:flowers",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:bee_nest",
+      "points": 4,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:honeycomb_block",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:sweet_berry_bush",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "#minecraft:logs",
+      "points": 1,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:cobweb",
+      "points": 2,
+      "max_points": 8
+    }
+  ],
+  "flying": [
+    {
+      "block": "#minecraft:leaves",
+      "points": 1,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:hay_block",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "#minecraft:wool",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:scaffolding",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:bamboo",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:lightning_rod",
+      "points": 4,
+      "max_points": 8
+    }
+  ],
+  "field": [
+    {
+      "block": "minecraft:grass_block",
+      "points": 1,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:hay_block",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "#minecraft:flowers",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "#minecraft:crops",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:composter",
+      "points": 4,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:dirt_path",
+      "points": 1,
+      "max_points": 6
+    }
+  ],
+  "fairy": [
+    {
+      "block": "#minecraft:flowers",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:amethyst_block",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:amethyst_cluster",
+      "points": 4,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:pink_petals",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:cake",
+      "points": 4,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:glow_lichen",
+      "points": 2,
+      "max_points": 8
+    }
+  ],
+  "humanlike": [
+    {
+      "block": "minecraft:crafting_table",
+      "points": 2,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:bookshelf",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:lectern",
+      "points": 4,
+      "max_points": 8
+    },
+    {
+      "block": "#minecraft:beds",
+      "points": 3,
+      "max_points": 9
+    },
+    {
+      "block": "minecraft:lantern",
+      "points": 2,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:bricks",
+      "points": 1,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:smooth_stone",
+      "points": 1,
+      "max_points": 8
+    }
+  ],
+  "mineral": [
+    {
+      "block": "minecraft:stone",
+      "points": 1,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:iron_block",
+      "points": 4,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:copper_block",
+      "points": 3,
+      "max_points": 9
+    },
+    {
+      "block": "minecraft:calcite",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:tuff",
+      "points": 1,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:magma_block",
+      "points": 2,
+      "max_points": 8
+    },
+    {
+      "block": "minecraft:amethyst_block",
+      "points": 2,
+      "max_points": 8
+    }
+  ],
+  "amorphous": [
+    {
+      "block": "minecraft:soul_sand",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:soul_soil",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:soul_lantern",
+      "points": 3,
+      "max_points": 9
+    },
+    {
+      "block": "minecraft:sculk",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:slime_block",
+      "points": 3,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:honey_block",
+      "points": 3,
+      "max_points": 9
+    }
+  ],
+  "default": [
+    {
+      "block": "minecraft:grass_block",
+      "points": 1,
+      "max_points": 12
+    },
+    {
+      "block": "#minecraft:flowers",
+      "points": 2,
+      "max_points": 12
+    },
+    {
+      "block": "minecraft:water",
+      "points": 1,
+      "max_points": 10
+    },
+    {
+      "block": "minecraft:hay_block",
+      "points": 2,
+      "max_points": 10
+    },
+    {
+      "block": "#minecraft:logs",
+      "points": 1,
+      "max_points": 10
+    }
+  ]
+}

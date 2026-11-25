@@ -1,0 +1,138 @@
+{
+  "general_settings": {
+    "max_ranch_blocks_per_chunk": -1,
+    "max_ranch_blocks_per_player": -1,
+    "slots_per_ranch_block": 3,
+    "enable_fertility_system": false,
+    "default_fertility_uses": 5,
+    "allow_ditto_x_ditto": false,
+    "max_eggs_per_slot": 1,
+    "language": "fr_fr",
+    "op_level_fallback": 2
+  },
+  "environment_5x5": {
+    "base_breed_duration_seconds": 5400,
+    "min_breed_duration_seconds": 1200,
+    "optimal_points_required": 50,
+    "scan_refresh_cooldown_seconds": 2
+  },
+  "genetics": {
+    "mother_ability_inheritance_chance": 0.3,
+    "strict_mother_ha_required": true,
+    "base_shiny_rate": 8192,
+    "masuda_shiny_multiplier": 6.0,
+    "destiny_knot_ivs": 5,
+    "default_inherited_ivs": 3,
+    "everstone_nature_chance": 1.0,
+    "masuda_mode": "LANGUAGE",
+    "regional_form_mother_chance": 0.3,
+    "inheritable_form_keywords": [
+      "alola",
+      "galar",
+      "hisui",
+      "paldea"
+    ],
+    "non_inheritable_balls": [
+      "cobblemon:master_ball",
+      "cobblemon:cherish_ball"
+    ],
+    "blocked_species": [],
+    "blocked_labels": [],
+    "incense_babies": {
+      "azurill": [
+        "cobblepulse_ranch:sea_incense",
+        "cobblemon:sea_incense"
+      ],
+      "wynaut": [
+        "cobblepulse_ranch:lax_incense",
+        "cobblemon:lax_incense"
+      ],
+      "budew": [
+        "cobblepulse_ranch:rose_incense",
+        "cobblemon:rose_incense"
+      ],
+      "chingling": [
+        "cobblepulse_ranch:pure_incense",
+        "cobblemon:pure_incense"
+      ],
+      "bonsly": [
+        "cobblepulse_ranch:rock_incense",
+        "cobblemon:rock_incense"
+      ],
+      "mimejr": [
+        "cobblepulse_ranch:odd_incense",
+        "cobblemon:odd_incense"
+      ],
+      "happiny": [
+        "cobblepulse_ranch:luck_incense",
+        "cobblemon:luck_incense"
+      ],
+      "munchlax": [
+        "cobblepulse_ranch:full_incense",
+        "cobblemon:full_incense"
+      ],
+      "mantyke": [
+        "cobblepulse_ranch:wave_incense",
+        "cobblemon:wave_incense"
+      ]
+    },
+    "offspring_variants": {
+      "nidoranf": [
+        "nidoranf",
+        "nidoranm"
+      ],
+      "nidoranm": [
+        "nidoranf",
+        "nidoranm"
+      ],
+      "volbeat": [
+        "volbeat",
+        "illumise"
+      ],
+      "illumise": [
+        "volbeat",
+        "illumise"
+      ],
+      "manaphy": [
+        "phione"
+      ]
+    }
+  },
+  "hatching_and_items": {
+    "egg_tick_interval_seconds": 5,
+    "flame_body_hatch_multiplier": 2.0,
+    "silver_hourglass_reduction_mode": "PERCENTAGE",
+    "silver_hourglass_value": 25.0,
+    "gold_hourglass_instant_breed": true,
+    "gold_hourglass_instant_hatch": true,
+    "steps_per_egg_cycle": 256,
+    "steps_per_block": 1.0,
+    "max_blocks_per_interval": 60.0,
+    "silver_hourglass_fixed_egg_steps": 1000,
+    "hatch_boost_abilities": [
+      "flamebody",
+      "magmaarmor",
+      "steamengine"
+    ]
+  },
+  "command_cooldowns_seconds": {
+    "daycare_remote": 300,
+    "breed_command": 3600,
+    "hatch_command": 7200,
+    "eggsee_command": 5,
+    "anti_spam": 1
+  },
+  "remote_breed": {
+    "slots": 3,
+    "duration_seconds": 3600,
+    "cost": 0
+  },
+  "neutering": {
+    "enabled": true,
+    "require_current_owner": true
+  },
+  "bottle_caps": {
+    "enabled": true,
+    "min_level": 100
+  }
+}

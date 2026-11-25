@@ -1,0 +1,58 @@
+mods client : ['Cobblemon-fabric-1.8.4+1.21.1.jar', 'accessories-fabric-1.1.0-beta.54+1.21.1.jar', 'architectury-13.0.12-fabric.jar', 'cobblepulse-ecology-3.10.2+mc1.21.1.jar', 'cobblepulse-ranch-1.0.0.jar', 'cobblepulse-utils.jar', 'fabric-api-0.116.18+1.21.1.jar', 'fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar', 'mega_showdown-fabric-1.4+1.8.4+1.21.1-release.jar', 'owo-lib-0.13.0-alpha.15.1+1.21.jar']
+preparation du client : code 0
+serveur pret : True
+$ xvfb-run -n 98 -s -screen 0 1280x720x24 /usr/bin/python3 -m portablemc --main-dir /home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client --work-dir /home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client start -u RanchTest --resolution 1280x720 --jvm /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64/bin/java --jvm-args=-Xmx3G -Dcobblepulse_ranch.livetest=true -s 127.0.0.1 -p 25565 fabric:1.21.1:0.19.5
+client termine (140 s)
+[10:44:47] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS bloc_pose
+[10:44:47] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS message_pose - [CobbleRanch] Pension posée. Clic droit pour y déposer deux Pokémon de ton PC.
+[10:44:51] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS ecran_pension_ouvert - fr.cobblepulse.ranch.client.RanchScreen@526c91c8
+[10:44:51] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS trois_emplacements
+[10:44:52] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS choisir_parent_a - [pick:0:A, pick:0:B, collect:0(off), silver:0(off), gold:0(off), pick:1:A, pick:1:B, collect:1(off), silver:1(off), gold:1(off), pick:2:A, pick:2:B, collect:2(off), silver:2(off), gold:2(off), refresh, guide, clos
+[10:44:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS ecran_choix_pc - 4
+[10:44:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS mewtwo_grise
+[10:44:56] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS depot_parent_a - {"index":0,"a":{"uuid":"ab4f7c36-b50b-421f-a5c0-63f6fef75eed","species":"cobblemon:eevee","species_key":"cobblemon.species.eevee.name","species_name":"Évoli","nickname":"","form":"","gender":"female","level":20,"shi
+[10:44:57] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS incompatible_grise
+[10:44:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS reproduction_lancee - {"index":0,"a":{"uuid":"ab4f7c36-b50b-421f-a5c0-63f6fef75eed","species":"cobblemon:eevee","species_key":"cobblemon.species.eevee.name","species_name":"Évoli","nickname":"","form":"","gender":"female","level":20
+[10:44:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS habitat_analyse - 14 INCOMPLET
+[10:44:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pc_sans_les_parents
+[10:45:02] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_argent_pension - [pick:0:A, take:0:A, pick:0:B, take:0:B, collect:0(off), silver:0, gold:0, pick:1:A, pick:1:B, collect:1(off), silver:1(off), gold:1(off), pick:2:A, pick:2:B, collect:2(off), silver:2(off), gold:2(off), refr
+[10:45:03] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_argent_reduit - 1795602442513 < 1795603497332
+[10:45:03] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_or_pension
+[10:45:05] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeuf_pondu - {"index":0,"a":{"uuid":"ab4f7c36-b50b-421f-a5c0-63f6fef75eed","species":"cobblemon:eevee","species_key":"cobblemon.species.eevee.name","species_name":"Évoli","nickname":"","form":"","gender":"female","level":20,"shiny":
+[10:45:07] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeuf_dans_inventaire
+[10:45:07] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeuf_evoli - {ability_key:"cobblemon.ability.adaptability",ability_name:"Adaptabilité",ball:"cobblemon:poke_ball",ball_key:"item.cobblemon.poke_ball",ball_name:"Poké Ball",color:15263962,cycles:35,egg_moves:[],form:"",form_id:"",gen
+[10:45:07] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS infobulle_oeuf - 6/15
+[10:45:09] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeufs_modeles_par_type - 29 modeles distincts pour 29 oeufs
+[10:45:09] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS second_type_en_taches
+[10:45:13] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS eggsee - [CobbleRanch] --- ANALYSE DE L'ŒUF EN MAIN --- | • Espèce : Évoli | Nature : Discret | Poké Ball : Poké Ball | • Talent : Adaptabilité (Normal) | Shiny : Non | Sexe : ♂ Mâle | • IVs : PV: 18 | Atk: 7 | Def: 17 | SpA: 26 | S
+[10:45:15] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS hatch_diagnostic - --------------------------------------------------
+[10:45:18] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_argent_oeuf - 6720.0 < 8960.0
+[10:45:20] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS eclosion_en_marchant - [CobbleRanch] Ton œuf a éclos ! C'est un Évoli !
+[10:45:20] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pokemon_dans_equipe - 0 -> 1
+[10:45:23] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS breed_analyse - [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ --- | • Parent 2 : Évoli ♀ (Nv. 15) | Groupes : Terrestre | • Parent 3 : Évoli ♂ (Nv. 15) | Groupes : Terrestre | • Résultat : COMPATIBLE ✔ (Terrestre) | • Œuf : Évoli | • G
+[10:45:25] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS breed_a_distance_vip - [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ --- | • Parent 2 : Évoli ♀ (Nv. 15) | Groupes : Terrestre | • Parent 3 : Évoli ♂ (Nv. 15) | Groupes : Terrestre | • Résultat : COMPATIBLE ✔ (Terrestre) | • Œuf : Évol
+[10:45:26] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS daycare_ecran - 2
+[10:45:28] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS castrer_demande_confirmation - [CobbleRanch] Castrer Évoli ♂ ? C'est DÉFINITIF : il ne pourra plus jamais se reproduire, et ce sera visible au GTS. Tape /castrer 1 confirmer pour confirmer.
+[10:45:29] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS castrer_dresseur_origine - [CobbleRanch] Évoli ♂ est maintenant castré.
+[10:45:30] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS castration_visible_breed - [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ --- | • Parent 1 : Évoli ♂ (Nv. 1) | Groupes : Terrestre | CASTRÉ | • Parent 2 : Évoli ♂ (Nv. 16) | Groupes : Terrestre | • Résultat : INCOMPATIBLE ✖ — Évoli est 
+[10:45:32] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS guide_ouvert - fr.cobblepulse.ranch.client.GuideScreen@74e50633
+[10:45:35] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_ouvert - 2
+[10:45:35] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_forcer - [filter, sort, search, force:34816f0b-d352-4ae3-83e6-4160dbb21595:0, time:34816f0b-d352-4ae3-83e6-4160dbb21595:0, cancel:34816f0b-d352-4ae3-83e6-4160dbb21595:0, delete:34816f0b-d352-4ae3-83e6-4160dbb21595:0, force:8b9
+[10:45:37] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_ponte_forcee - Ponte forcée (RanchTest, emplacement 1)
+[10:45:37] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_ditto_override - Ditto x Ditto : AUTORISÉ
+[10:45:43] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pokegive_egg_salameche_chromatique - [CobbleRanch] Œuf de Salamèche ★ donné à RanchTest
+[10:45:44] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pokegive_egg_commandes - 3 oeufs
+[10:45:48] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_menu_equipe -   [3] Machoc ♂ Niv. 100  6 stat(s) à entraîner
+[10:45:51] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_clic_droit_ouvre_ecran - CapsuleScreen
+[10:45:52] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_bouton_attaque
+[10:45:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_argent_consommee
+[10:45:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_ecran_ferme_sans_capsule
+[10:45:54] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_argent_attaque_31 - [CobbleRanch] IV base 0/0/0/0/0/0 combat 0/31/0/0/0/0 | client combat 0/31/0/0/0/0
+[10:45:57] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_ecran_or
+[10:45:58] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_bouton_or
+[10:45:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_or_consommee
+[10:46:00] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_or_toutes_31 - [CobbleRanch] IV base 0/0/0/0/0/0 combat 31/31/31/31/31/31 | client combat 31/31/31/31/31/31
+[10:46:01] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_sans_objet_refusee - [CobbleRanch] Tiens une Capsule d'Argent ou une Capsule d'Or en main.
+[10:46:04] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS retrait_rend_les_pokemon - [CobbleRanch] Pension retirée : 2 Pokémon renvoyé(s) au PC, 1 œuf(s) rendu(s). | Le bloc en 3000, 300, 3000 a été modifié
+[10:46:04] [Render thread/INFO]: [CobblePulse-Ranch][livetest] SUMMARY: 51 pass, 0 fail
+captures : ['client-latest.log', 'client.log', 'live_01_pension_vide.png', 'live_02_choix_pc.png', 'live_03_pension_active.png', 'live_04_oeuf_pret.png', 'live_05_infobulle_oeuf.png', 'live_05b_oeufs_par_type.png', 'live_06_daycare.png', 'live_07_guide_mecanique.png', 'live_08_guide_habitats.png', 'live_09_admin.png', 'live_10_bloc_pension_monde.png', 'live_11_pokegive_oeufs.png', 'live_12_capsule_argent_ecran.png', 'live_12b_capsule_argent_chat.png', 'live_13_capsule_or.png', 'live_13_capsule_or_ecran.png', 'server.log', 'steps.txt']

@@ -1,0 +1,518 @@
+[10:43:57] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.19.5
+[10:43:57] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
+[10:43:57] [main/WARN]: Warnings were found!
+ - Mod 'CobblePulse Ranch' (cobblepulse_ranch) 1.0.0 recommends any version of luckperms, which is missing!
+	 - You should install any version of luckperms for the optimal experience.
+ - Mod 'CobblePulse Utils' (cobblepulse_utils) 1.5.0 recommends any version of luckperms, which is missing!
+	 - You should install any version of luckperms for the optimal experience.
+ - Mod 'CobblePulse Utils' (cobblepulse_utils) 1.5.0 recommends any version of cobbledollars, which is missing!
+	 - You should install any version of cobbledollars for the optimal experience.
+[10:43:57] [main/INFO]: Loading 93 mods:
+	- accessories 1.1.0-beta.54+1.21.1
+	- architectury 13.0.12
+	- cobblemon 1.8.4+1.21.1
+	   |-- com_ibm_icu_icu4j 71.1
+	   |-- org_graalvm_js_js 22.3.0
+	   |-- org_graalvm_regex_regex 22.3.0
+	   |-- org_graalvm_sdk_graal-sdk 22.3.0
+	   |-- org_graalvm_truffle_truffle-api 22.3.0
+	   |-- org_mongodb_mongodb-driver-core 4.10.2
+	   \-- org_mongodb_mongodb-driver-sync 4.10.2
+	- cobblepulse_ecology 3.10.2
+	- cobblepulse_ranch 1.0.0
+	- cobblepulse_utils 1.5.0
+	   |-- com_electronwill_night-config_core 3.6.7
+	   |-- com_electronwill_night-config_toml 3.6.7
+	   |-- com_mysql_mysql-connector-j 8.4.0
+	   |-- com_zaxxer_hikaricp 5.1.0
+	   \-- org_xerial_sqlite-jdbc 3.46.1.3
+	- fabric-api 0.116.18+1.21.1
+	   |-- fabric-api-base 0.4.42+6573ed8c19
+	   |-- fabric-api-lookup-api-v1 1.6.72+7b3d111d19
+	   |-- fabric-biome-api-v1 13.0.31+d527f9fd19
+	   |-- fabric-block-api-v1 1.1.0+0bc3503219
+	   |-- fabric-block-view-api-v2 1.0.11+ebb2264e19
+	   |-- fabric-blockrenderlayer-v1 1.1.52+0af3f5a719
+	   |-- fabric-client-tags-api-v1 1.2.0+1eb36c0719
+	   |-- fabric-command-api-v1 1.2.49+f71b366f19
+	   |-- fabric-command-api-v2 2.2.28+6ced4dd919
+	   |-- fabric-commands-v0 0.2.66+df3654b319
+	   |-- fabric-content-registries-v0 8.0.19+b559734419
+	   |-- fabric-convention-tags-v1 2.1.7+7f945d5b19
+	   |-- fabric-convention-tags-v2 2.12.0+c3656daa19
+	   |-- fabric-crash-report-info-v1 0.2.29+0af3f5a719
+	   |-- fabric-data-attachment-api-v1 1.4.7+5b36e0f719
+	   |-- fabric-data-generation-api-v1 20.3.1+7439032a19
+	   |-- fabric-dimensions-v1 4.0.1+65213ef819
+	   |-- fabric-entity-events-v1 1.8.0+2b27e0a419
+	   |-- fabric-events-interaction-v0 0.7.14+ba9dae0619
+	   |-- fabric-game-rule-api-v1 1.0.53+6ced4dd919
+	   |-- fabric-item-api-v1 11.3.0+467044f319
+	   |-- fabric-item-group-api-v1 4.1.7+def88e3a19
+	   |-- fabric-key-binding-api-v1 1.0.47+0af3f5a719
+	   |-- fabric-keybindings-v0 0.2.45+df3654b319
+	   |-- fabric-lifecycle-events-v1 2.6.0+0865547519
+	   |-- fabric-loot-api-v2 3.0.15+3f89f5a519
+	   |-- fabric-loot-api-v3 1.0.3+3f89f5a519
+	   |-- fabric-message-api-v1 6.0.14+8aaf3aca19
+	   |-- fabric-model-loading-api-v1 2.1.0+b4d813fc19
+	   |-- fabric-networking-api-v1 4.3.1+d30f6a7919
+	   |-- fabric-object-builder-api-v1 15.2.1+40875a9319
+	   |-- fabric-particles-v1 4.0.2+6573ed8c19
+	   |-- fabric-recipe-api-v1 5.0.16+2475392c19
+	   |-- fabric-registry-sync-v0 5.3.2+e3eddc2119
+	   |-- fabric-renderer-api-v1 3.4.1+b4d813fc19
+	   |-- fabric-renderer-indigo 1.7.1+c705a49c19
+	   |-- fabric-renderer-registries-v1 3.2.71+df3654b319
+	   |-- fabric-rendering-data-attachment-v1 0.3.49+73761d2e19
+	   |-- fabric-rendering-fluids-v1 3.1.6+1daea21519
+	   |-- fabric-rendering-v0 1.1.74+df3654b319
+	   |-- fabric-rendering-v1 5.2.1+f44c2eea19
+	   |-- fabric-resource-conditions-api-v1 4.4.0+7439032a19
+	   |-- fabric-resource-loader-v0 1.3.1+5b5275af19
+	   |-- fabric-screen-api-v1 2.0.26+639b4c0719
+	   |-- fabric-screen-handler-api-v1 1.3.91+b559734419
+	   |-- fabric-sound-api-v1 1.0.23+6573ed8c19
+	   |-- fabric-tag-api-v1 1.3.0+1eb36c0719
+	   |-- fabric-transfer-api-v1 5.4.5+9eaf054019
+	   \-- fabric-transitive-access-wideners-v1 6.2.0+45b9699719
+	- fabric-language-kotlin 1.14.2+kotlin.2.4.21
+	   |-- org_jetbrains_kotlin_kotlin-reflect 2.4.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib 2.4.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk7 2.4.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk8 2.4.21
+	   |-- org_jetbrains_kotlinx_atomicfu-jvm 0.33.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm 1.11.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-jdk8 1.11.0
+	   |-- org_jetbrains_kotlinx_kotlinx-datetime-jvm 0.8.0
+	   |-- org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm 0.9.1
+	   |-- org_jetbrains_kotlinx_kotlinx-io-core-jvm 0.9.1
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm 1.11.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-core-jvm 1.11.0
+	   \-- org_jetbrains_kotlinx_kotlinx-serialization-json-jvm 1.11.0
+	- fabricloader 0.19.5
+	   \-- mixinextras 0.5.5
+	- java 21
+	- mega_showdown 1.4+1.8.4+1.21.1-release
+	- minecraft 1.21.1
+	- owo 0.13.0-alpha.15.1+1.21
+	   |-- blue_endless_jankson 1.2.2
+	   |-- io_wispforest_endec 0.1.5.1
+	   |-- io_wispforest_endec_gson 0.1.3.1
+	   |-- io_wispforest_endec_jankson 0.1.3.1
+	   \-- io_wispforest_endec_netty 0.1.2
+[10:43:57] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[10:43:58] [main/WARN]: Error loading class: juuxel/adorn/block/variant/BlockVariantSets (java.lang.ClassNotFoundException: juuxel/adorn/block/variant/BlockVariantSets)
+[10:43:58] [main/WARN]: @Mixin target juuxel.adorn.block.variant.BlockVariantSets was not found mixins.cobblemon-common.json:invoker.AdornRegisterInvoker from mod cobblemon
+[10:43:58] [main/WARN]: Error loading class: xyz/nucleoid/server/translations/impl/language/LanguageReader (java.lang.ClassNotFoundException: xyz/nucleoid/server/translations/impl/language/LanguageReader)
+[10:43:58] [main/WARN]: @Mixin target xyz.nucleoid.server.translations.impl.language.LanguageReader was not found owo.mixins.json:extension.json5.LanguageReaderMixin from mod owo
+[10:43:58] [main/WARN]: Error loading class: xyz/nucleoid/server/translations/impl/language/SystemDelegatedLanguage (java.lang.ClassNotFoundException: xyz/nucleoid/server/translations/impl/language/SystemDelegatedLanguage)
+[10:43:58] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.5).
+[10:44:00] [Datafixer Bootstrap/INFO]: 226 Datafixer optimizations took 332 milliseconds
+[10:44:03] [main/WARN]: Unrecognized user type: 
+[10:44:04] [Render thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[10:44:04] [Render thread/INFO]: Setting user: RanchTest
+[10:44:04] [Render thread/INFO]: Registering Listeners!
+[10:44:04] [Render thread/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.wiki/w/Permission_level
+[10:44:04] [Render thread/INFO]: Launching Cobblemon 1.8.4 
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:pokemon
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:empty_pokeball
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:boat
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:chest_boat
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:poke_bobber
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:generic_bedrock
+[10:44:06] [Render thread/ERROR]: No data fixer registered for cobblemon:npc
+[10:44:06] [Render thread/INFO]: Starting the Best Spawner...
+[10:44:06] [Render thread/INFO]: Loaded 7 spawning condition types.
+[10:44:06] [Render thread/INFO]: Loaded 6 spawnable position types.
+[10:44:06] [Render thread/INFO]: Loaded 4 spawn detail types.
+[10:44:06] [Cobblemon Showdown/INFO]: Starting showdown service...
+[10:44:07] [Cobblemon Showdown/INFO]: MegaShowdown config not found, creating default.
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/moves.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/sim/battle-actions.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/sim/battle.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/sim/pokemon.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/abilities.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/sim/side.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/conditions.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/index.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/mods/cobblemon/items.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/mods/cobblemon/conditions.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/mods/cobblemon/typechart.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/mods/cobblemon/moves.js
+[10:44:07] [Cobblemon Showdown/INFO]: Loaded fallback file: ./showdown/data/mods/cobblemon/abilities.js
+[10:44:07] [Cobblemon Showdown/INFO]: All files are ready!
+[10:44:08] [Cobblemon Showdown/INFO]: Showdown has been started!
+[10:44:08] [Render thread/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/custom_status registry
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/showdown/moves registry
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/showdown/ability registry
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/showdown/conditions registry
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/showdown/held_items registry
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/showdown/typecharts registry
+[10:44:08] [Render thread/INFO]: Registered the mega_showdown:mega_showdown/showdown/scripts registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:molang registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:species_features registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:global_species_features registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:species_feature_assignments registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:action_effects registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:moves registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:moveset_builders registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:abilities registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:behaviours registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:marks registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:species registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:species_additions registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:pokeballs registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:properties_tab_completion registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:party_pools registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:party_compositions registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:spawn_detail_presets registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:spawn_rules registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:mechanics registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:bag_items registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:held_items registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:dialogues registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:natural_materials registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:fossils registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:npc_preset registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:npc registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:dex_entries registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:dex_entry_additions registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:dexes registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:dex_additions registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:cosmetic_items registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:callbacks registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:unlockable_pc_box_wallpapers registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:starters registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:spawn_pool_world registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:pokerods registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:berries registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:habitat_pools registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:seasonings registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:pokemon_interactions registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:spawn_bait_effects registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:ride_settings registry
+[10:44:08] [Render thread/INFO]: Registered the cobblemon:technical_machines registry
+[10:44:09] [Render thread/INFO]: CobblePulse-Ecology : 2 mega-gemme(s) enregistree(s)
+[10:44:09] [Render thread/INFO]: [CobblePulse-Ranch] 1.0.0 initialise
+[10:44:09] [Render thread/INFO]: Registering C2S receiver with id mega_showdown:mega_evo
+[10:44:09] [Render thread/INFO]: Registering C2S receiver with id mega_showdown:primal_evo
+[10:44:09] [Render thread/INFO]: Registering C2S receiver with id mega_showdown:crown
+[10:44:09] [Render thread/INFO]: Registering C2S receiver with id mega_showdown:ultra_burst
+[10:44:09] [Render thread/INFO]: Registering C2S receiver with id mega_showdown:secret_sword_move_swap
+[10:44:09] [Render thread/INFO]: My Seethenhagen factory makes 331 pounds of licorice per hour
+[10:44:09] [Render thread/INFO]: Registering S2C receiver with id architectury:spawn_entity_packet
+[10:44:09] [Render thread/INFO]: Initializing Cobblemon client
+[10:44:09] [Render thread/INFO]: Registering Pokémon renderer
+[10:44:09] [Render thread/INFO]: Registering PokéBall renderer
+[10:44:09] [Render thread/INFO]: Registering Boat renderer
+[10:44:09] [Render thread/INFO]: Registering Boat with Chest renderer
+[10:44:09] [Render thread/INFO]: Registering Generic Bedrock renderer
+[10:44:09] [Render thread/INFO]: Registering Generic Bedrock Entity renderer
+[10:44:09] [Render thread/INFO]: Registering PokeRod Bobber renderer
+[10:44:09] [Render thread/INFO]: Registering NPC renderer
+[10:44:09] [Render thread/INFO]: Registering custom BuiltinItemRenderers
+[10:44:09] [Render thread/INFO]: [CobblePulse-Utils] Client initialise
+[10:44:09] [Render thread/INFO]: [Indigo] Registering Indigo renderer!
+[10:44:09] [Render thread/INFO]: Registering S2C receiver with id mega_showdown:interaction_wheel_packet
+[10:44:09] [Render thread/INFO]: Registering S2C receiver with id mega_showdown:config_sync
+[10:44:09] [Render thread/INFO]: Registering S2C receiver with id mega_showdown:battle_state
+[10:44:09] [Render thread/INFO]: Registering S2C receiver with id mega_showdown:effectiveness_sync
+[10:44:10] [Render thread/INFO]: Backend library: LWJGL version 3.3.3-snapshot
+[10:44:11] [Render thread/ERROR]: Error while loading the narrator
+com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
+	at knot/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar:?]
+	at knot/com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
+	at knot/com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) [text2speech-1.17.9.jar:?]
+	at knot/net.minecraft.class_333.<init>(class_333.java:19) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_310.<init>(class_310.java:675) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.main.Main.main(Main.java:239) [client-intermediary.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517) [fabric-loader-0.19.5.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) [fabric-loader-0.19.5.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.19.5.jar:?]
+Caused by: java.lang.UnsatisfiedLinkError: Unable to load library 'flite':
+libflite.so: cannot open shared object file: No such file or directory
+libflite.so: cannot open shared object file: No such file or directory
+Native library (linux-x86-64/libflite.so) not found in resource path (/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/intermediary/1.21.1/intermediary-1.21.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/github/oshi/oshi-core/6.4.10/oshi-core-6.4.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/ibm/icu/icu4j/73.2/icu4j-73.2.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/authlib/6.0.54/authlib-6.0.54.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/brigadier/1.3.10/brigadier-1.3.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/datafixerupper/8.0.16/datafixerupper-8.0.16.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/logging/1.2.7/logging-1.2.7.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/text2speech/1.17.9/text2speech-1.17.9.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-buffer/4.1.97.Final/netty-buffer-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-codec/4.1.97.Final/netty-codec-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-common/4.1.97.Final/netty-common-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-handler/4.1.97.Final/netty-handler-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-resolver/4.1.97.Final/netty-resolver-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-classes-epoll/4.1.97.Final/netty-transport-classes-epoll-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-native-unix-common/4.1.97.Final/netty-transport-native-unix-common-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport/4.1.97.Final/netty-transport-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/it/unimi/dsi/fastutil/8.5.12/fastutil-8.5.12.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/java/dev/jna/jna-platform/5.14.0/jna-platform-5.14.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/logging/log4j/log4j-api/2.22.1/log4j-api-2.22.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/logging/log4j/log4j-core/2.22.1/log4j-core-2.22.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.22.1/log4j-slf4j2-impl-2.22.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/joml/joml/1.10.5/joml-1.10.5.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-freetype/3.3.3/lwjgl-freetype-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-freetype/3.3.3/lwjgl-freetype-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-glfw/3.3.3/lwjgl-glfw-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-glfw/3.3.3/lwjgl-glfw-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-jemalloc/3.3.3/lwjgl-jemalloc-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-jemalloc/3.3.3/lwjgl-jemalloc-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-openal/3.3.3/lwjgl-openal-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-openal/3.3.3/lwjgl-openal-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-opengl/3.3.3/lwjgl-opengl-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-opengl/3.3.3/lwjgl-opengl-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-stb/3.3.3/lwjgl-stb-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-stb/3.3.3/lwjgl-stb-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-tinyfd/3.3.3/lwjgl-tinyfd-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-tinyfd/3.3.3/lwjgl-tinyfd-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl/3.3.3/lwjgl-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl/3.3.3/lwjgl-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/versions/fabric-1.21.1-0.19.5/fabric-1.21.1-0.19.5.jar)
+	at knot/com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:325) ~[jna-5.14.0.jar:?]
+	at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:481) ~[jna-5.14.0.jar:?]
+	at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:423) ~[jna-5.14.0.jar:?]
+	at knot/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar:?]
+	... 8 more
+	Suppressed: java.lang.UnsatisfiedLinkError: libflite.so: cannot open shared object file: No such file or directory
+		at knot/com.sun.jna.Native.open(Native Method) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:213) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:481) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:423) ~[jna-5.14.0.jar:?]
+		at knot/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar:?]
+		at knot/com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
+		at knot/com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) [text2speech-1.17.9.jar:?]
+		at knot/net.minecraft.class_333.<init>(class_333.java:19) [client-intermediary.jar:?]
+		at knot/net.minecraft.class_310.<init>(class_310.java:675) [client-intermediary.jar:?]
+		at knot/net.minecraft.client.main.Main.main(Main.java:239) [client-intermediary.jar:?]
+		at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517) [fabric-loader-0.19.5.jar:?]
+		at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) [fabric-loader-0.19.5.jar:?]
+		at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.19.5.jar:?]
+	Suppressed: java.lang.UnsatisfiedLinkError: libflite.so: cannot open shared object file: No such file or directory
+		at knot/com.sun.jna.Native.open(Native Method) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:226) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:481) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:423) ~[jna-5.14.0.jar:?]
+		at knot/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar:?]
+		at knot/com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
+		at knot/com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) [text2speech-1.17.9.jar:?]
+		at knot/net.minecraft.class_333.<init>(class_333.java:19) [client-intermediary.jar:?]
+		at knot/net.minecraft.class_310.<init>(class_310.java:675) [client-intermediary.jar:?]
+		at knot/net.minecraft.client.main.Main.main(Main.java:239) [client-intermediary.jar:?]
+		at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517) [fabric-loader-0.19.5.jar:?]
+		at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) [fabric-loader-0.19.5.jar:?]
+		at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.19.5.jar:?]
+	Suppressed: java.io.IOException: Native library (linux-x86-64/libflite.so) not found in resource path (/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/intermediary/1.21.1/intermediary-1.21.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/github/oshi/oshi-core/6.4.10/oshi-core-6.4.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/ibm/icu/icu4j/73.2/icu4j-73.2.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/authlib/6.0.54/authlib-6.0.54.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/brigadier/1.3.10/brigadier-1.3.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/datafixerupper/8.0.16/datafixerupper-8.0.16.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/logging/1.2.7/logging-1.2.7.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/com/mojang/text2speech/1.17.9/text2speech-1.17.9.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-buffer/4.1.97.Final/netty-buffer-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-codec/4.1.97.Final/netty-codec-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-common/4.1.97.Final/netty-common-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-handler/4.1.97.Final/netty-handler-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-resolver/4.1.97.Final/netty-resolver-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-classes-epoll/4.1.97.Final/netty-transport-classes-epoll-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport-native-unix-common/4.1.97.Final/netty-transport-native-unix-common-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/io/netty/netty-transport/4.1.97.Final/netty-transport-4.1.97.Final.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/it/unimi/dsi/fastutil/8.5.12/fastutil-8.5.12.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/java/dev/jna/jna-platform/5.14.0/jna-platform-5.14.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/commons/commons-compress/1.26.0/commons-compress-1.26.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/logging/log4j/log4j-api/2.22.1/log4j-api-2.22.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/logging/log4j/log4j-core/2.22.1/log4j-core-2.22.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.22.1/log4j-slf4j2-impl-2.22.1.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/joml/joml/1.10.5/joml-1.10.5.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-freetype/3.3.3/lwjgl-freetype-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-freetype/3.3.3/lwjgl-freetype-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-glfw/3.3.3/lwjgl-glfw-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-glfw/3.3.3/lwjgl-glfw-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-jemalloc/3.3.3/lwjgl-jemalloc-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-jemalloc/3.3.3/lwjgl-jemalloc-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-openal/3.3.3/lwjgl-openal-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-openal/3.3.3/lwjgl-openal-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-opengl/3.3.3/lwjgl-opengl-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-opengl/3.3.3/lwjgl-opengl-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-stb/3.3.3/lwjgl-stb-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-stb/3.3.3/lwjgl-stb-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-tinyfd/3.3.3/lwjgl-tinyfd-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl-tinyfd/3.3.3/lwjgl-tinyfd-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl/3.3.3/lwjgl-3.3.3.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lwjgl/lwjgl/3.3.3/lwjgl-3.3.3-natives-linux.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/libraries/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/runner/work/cobblepulse-ranch/cobblepulse-ranch/run-prod-client/versions/fabric-1.21.1-0.19.5/fabric-1.21.1-0.19.5.jar)
+		at knot/com.sun.jna.Native.extractFromResourcePath(Native.java:1141) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:297) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:481) ~[jna-5.14.0.jar:?]
+		at knot/com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:423) ~[jna-5.14.0.jar:?]
+		at knot/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar:?]
+		at knot/com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
+		at knot/com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) [text2speech-1.17.9.jar:?]
+		at knot/net.minecraft.class_333.<init>(class_333.java:19) [client-intermediary.jar:?]
+		at knot/net.minecraft.class_310.<init>(class_310.java:675) [client-intermediary.jar:?]
+		at knot/net.minecraft.client.main.Main.main(Main.java:239) [client-intermediary.jar:?]
+		at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517) [fabric-loader-0.19.5.jar:?]
+		at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) [fabric-loader-0.19.5.jar:?]
+		at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.19.5.jar:?]
+[10:44:11] [Render thread/INFO]: Reloading ResourceManager: vanilla, fabric, accessories, cobblemon, cobblepulse_ecology, cobblepulse_ranch, cobblepulse_utils, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, mega_showdown, owo, cobblemon:gyaradosjump, cobblemon:regionbiasforms
+[10:44:11] [Render thread/INFO]: Loaded 37 custom rendering entries
+[10:44:11] [Render thread/INFO]: Loaded 9 custom layer data
+[10:44:11] [Render thread/INFO]: Loaded 19 custom tera map
+[10:44:11] [Worker-Main-2/INFO]: Found unifont_all_no_pua-15.1.05.hex, loading
+[10:44:11] [Worker-Main-2/INFO]: Found unifont_jp_patch-15.1.05.hex, loading
+[10:44:12] [Worker-Main-3/WARN]: Texture cobblemon:item/fishing/bobber_hook with size 8x8 limits mip level from 4 to 3
+[10:44:12] [Worker-Main-3/WARN]: minecraft:textures/atlas/blocks.png: dropping miplevel from 4 to 3, because of minimum power of two: 8
+[10:44:15] [Render thread/WARN]: Missing sound for event: minecraft:item.goat_horn.play
+[10:44:15] [Render thread/WARN]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[10:44:15] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at knot/net.minecraft.class_4225.method_38501(class_4225.java:302) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_4225.method_19661(class_4225.java:154) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_1140.method_4846(class_1140.java:116) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_1140.method_4837(class_1140.java:106) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_1144.method_18182(class_1144.java:128) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_1144.method_18788(class_1144.java:42) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_4080.method_18790(class_4080.java:13) ~[client-intermediary.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at knot/net.minecraft.class_4014.method_18365(class_4014.java:69) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.class_1255.method_18859(class_1255.java:162) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_4093.method_18859(class_4093.java:23) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_1255.method_16075(class_1255.java:136) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_1255.method_5383(class_1255.java:121) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_310.method_1523(class_310.java:1240) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_310.method_1514(class_310.java:882) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.main.Main.main(Main.java:256) [client-intermediary.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517) [fabric-loader-0.19.5.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) [fabric-loader-0.19.5.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.19.5.jar:?]
+[10:44:15] [Render thread/INFO]: Created: 2048x1024x3 minecraft:textures/atlas/blocks.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 128x128x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[10:44:15] [Render thread/WARN]: Method overwrite conflict for getChildren in accessories-common.mixins.json:client.ModelPartAccessor from mod accessories, previously written by com.cobblemon.mod.common.mixin.client.ModelPartMixin. Skipping method.
+[10:44:15] [Render thread/INFO]: Created: 4096x2048x0 minecraft:textures/atlas/particles.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[10:44:15] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[10:44:15] [Render thread/WARN]: Shader cobblemon:particle_add could not find sampler named Sampler2 in the specified shader program.
+[10:44:15] [Render thread/WARN]: Shader cobblemon:particle_cutout could not find sampler named Sampler2 in the specified shader program.
+[10:44:15] [Render thread/WARN]: Shader rendertype_entity_cutout could not find uniform named IViewRotMat in the specified shader program.
+[10:44:15] [Render thread/WARN]: Shader rendertype_entity_translucent could not find uniform named IViewRotMat in the specified shader program.
+[10:44:15] [Render thread/WARN]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[10:44:15] [Render thread/INFO]: Created: 128x128x0 cobblemon:textures/atlas/berries.png-atlas
+[10:44:15] [Render thread/INFO]: Loading assets...
+[10:44:15] [Render thread/INFO]: Loading particle effects...
+[10:44:16] [Render thread/INFO]: Loaded 1460 particle effects
+[10:44:16] [Render thread/INFO]: Loading animations...
+[10:44:21] [Render thread/INFO]: Loaded 12488 animations from 1317 animation groups
+[10:44:21] [Render thread/INFO]: Loading varying Bedrock assets...
+[10:44:22] [Render thread/INFO]: Loaded 1539 models.
+[10:44:23] [Render thread/INFO]: Loaded 1385 posers.
+[10:44:23] [Render thread/INFO]: Loaded 4643 variations.
+[10:44:23] [Render thread/INFO]: Loaded 72 berry models
+[10:44:23] [Render thread/INFO]: Loaded 6 misc models
+[10:44:23] [Render thread/INFO]: Loaded assets
+[10:44:23] [Render thread/INFO]: Connecting to 127.0.0.1, 25565
+[10:44:26] [Render thread/WARN]: It seems the given player has no slots bound to it within a init call, is that desired?
+[10:44:26] [Render thread/INFO]: Applying server overrides
+[10:44:26] [Render thread/INFO]: Responding with client values
+[10:44:27] [Render thread/INFO]: Loaded 168 marks
+[10:44:27] [Render thread/INFO]: Loaded 15 fossils
+[10:44:27] [Render thread/INFO]: Loaded 70 berries
+[10:44:28] [Render thread/INFO]: Loaded 2 advancements
+[10:44:31] [cobblemon Datafixer Bootstrap/INFO]: 6 Datafixer optimizations took 7 milliseconds
+[10:44:39] [Render thread/INFO]: [System] [CHAT] Changement de votre propre mode de jeu en Mode Créatif
+[10:44:39] [Render thread/INFO]: [System] [CHAT] Aucun objet n'a été trouvé sur le joueur RanchTest
+[10:44:45] [Render thread/INFO]: [System] [CHAT] Les 9 chunks dans la dimension minecraft:overworld de [186, 186] à [188, 188] sont maintenant marqués comme étant forcés de charger
+[10:44:45] [Render thread/INFO]: [System] [CHAT] RanchTest s'est fait téléporter en 3000.500000, 301.000000, 3004.500000
+[10:44:45] [Render thread/INFO]: [System] [CHAT] Remplissage de 169 bloc(s)
+[10:44:45] [Render thread/INFO]: [System] [CHAT] Aucun bloc n'a été rempli
+[10:44:45] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] 2 × cobblepulse_ranch:ranch_block donné(s) à RanchTest
+[10:44:46] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Pension posée. Clic droit pour y déposer deux Pokémon de ton PC.
+[10:44:47] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS bloc_pose
+[10:44:47] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS message_pose - [CobbleRanch] Pension posée. Clic droit pour y déposer deux Pokémon de ton PC.
+[10:44:47] [Render thread/INFO]: [System] [CHAT] Le bloc en 2998, 300, 2998 a été modifié
+[10:44:47] [Render thread/INFO]: [System] [CHAT] Le bloc en 3002, 300, 2998 a été modifié
+[10:44:47] [Render thread/INFO]: [System] [CHAT] Le bloc en 2998, 300, 3001 a été modifié
+[10:44:47] [Render thread/INFO]: [System] [CHAT] Le bloc en 3001, 300, 2999 a été modifié
+[10:44:47] [Render thread/INFO]: [System] [CHAT] Le bloc en 2999, 300, 2999 a été modifié
+[10:44:47] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] PC : Eevee
+[10:44:47] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] PC : Ditto
+[10:44:47] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] PC : Geodude
+[10:44:47] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] PC : Mewtwo
+[10:44:51] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS ecran_pension_ouvert - fr.cobblepulse.ranch.client.RanchScreen@526c91c8
+[10:44:51] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS trois_emplacements
+[10:44:51] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_01_pension_vide
+[10:44:52] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS choisir_parent_a - [pick:0:A, pick:0:B, collect:0(off), silver:0(off), gold:0(off), pick:1:A, pick:1:B, collect:1(off), silver:1(off), gold:1(off), pick:2:A, pick:2:B, collect:2(off), silver:2(off), gold:2(off), refresh, guide, close]
+[10:44:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS ecran_choix_pc - 4
+[10:44:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS mewtwo_grise
+[10:44:53] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_02_choix_pc
+[10:44:56] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS depot_parent_a - {"index":0,"a":{"uuid":"ab4f7c36-b50b-421f-a5c0-63f6fef75eed","species":"cobblemon:eevee","species_key":"cobblemon.species.eevee.name","species_name":"Évoli","nickname":"","form":"","gender":"female","level":20,"shiny":false,"held":"","held_name":"","held_effect":"","aspects":["female"],"groups":["Terrestre"],"fertility":5,"fertility_max":5,"neutered":false,"ditto":false,"is_ot":true,"ability":"Fuite","nature":"Calme","iv_total":57,"iv_hyper":""},"start":0,"duration":4224000,"pause":"Il manque un parent","eggs":[],"eggs_laid":0,"fertility":5,"score":14,"rating":"INCOMPLET","group":"Terrestre","habitat":[{"block":"minecraft:grass_block","count":0,"points":1,"max":12,"total":0},{"block":"minecraft:hay_block","count":2,"points":3,"max":12,"total":6},{"block":"#minecraft:flowers","count":2,"points":2,"max":10,"total":4},{"block":"#minecraft:crops","count":0,"points":2,"max":10,"total":0},{"block":"minecraft:composter","count":1,"points":4,"max":8,"total":4},{"block":"minecraft:dirt_path","count":0,"points":1,"max":6,"total":0}],"notes":""}
+[10:44:57] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS incompatible_grise
+[10:44:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS reproduction_lancee - {"index":0,"a":{"uuid":"ab4f7c36-b50b-421f-a5c0-63f6fef75eed","species":"cobblemon:eevee","species_key":"cobblemon.species.eevee.name","species_name":"Évoli","nickname":"","form":"","gender":"female","level":20,"shiny":false,"held":"","held_name":"","held_effect":"","aspects":["female"],"groups":["Terrestre"],"fertility":5,"fertility_max":5,"neutered":false,"ditto":false,"is_ot":true,"ability":"Fuite","nature":"Calme","iv_total":57,"iv_hyper":""},"b":{"uuid":"3b2974c4-43c3-4f0e-b8bb-ec36571a8c3a","species":"cobblemon:ditto","species_key":"cobblemon.species.ditto.name","species_name":"Métamorph","nickname":"","form":"","gender":"genderless","level":30,"shiny":false,"held":"","held_name":"","held_effect":"","aspects":["genderless"],"groups":["Métamorph"],"fertility":5,"fertility_max":5,"neutered":false,"ditto":true,"is_ot":true,"ability":"Échauffement","nature":"Jovial","iv_total":129,"iv_hyper":""},"start":1795603497332,"duration":4224000,"pause":"","eggs":[],"eggs_laid":0,"fertility":5,"score":14,"rating":"INCOMPLET","group":"Terrestre","habitat":[{"block":"minecraft:grass_block","count":0,"points":1,"max":12,"total":0},{"block":"minecraft:hay_block","count":2,"points":3,"max":12,"total":6},{"block":"#minecraft:flowers","count":2,"points":2,"max":10,"total":4},{"block":"#minecraft:crops","count":0,"points":2,"max":10,"total":0},{"block":"minecraft:composter","count":1,"points":4,"max":8,"total":4},{"block":"minecraft:dirt_path","count":0,"points":1,"max":6,"total":0}],"notes":"","offspring":"Évoli"}
+[10:44:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS habitat_analyse - 14 INCOMPLET
+[10:44:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pc_sans_les_parents
+[10:44:59] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] 3 × cobblepulse_ranch:silver_hourglass donné(s) à RanchTest
+[10:44:59] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] 3 × cobblepulse_ranch:gold_hourglass donné(s) à RanchTest
+[10:44:59] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_03_pension_active
+[10:45:02] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_argent_pension - [pick:0:A, take:0:A, pick:0:B, take:0:B, collect:0(off), silver:0, gold:0, pick:1:A, pick:1:B, collect:1(off), silver:1(off), gold:1(off), pick:2:A, pick:2:B, collect:2(off), silver:2(off), gold:2(off), refresh, guide, close]
+[10:45:03] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_argent_reduit - 1795602442513 < 1795603497332
+[10:45:03] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_or_pension
+[10:45:05] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeuf_pondu - {"index":0,"a":{"uuid":"ab4f7c36-b50b-421f-a5c0-63f6fef75eed","species":"cobblemon:eevee","species_key":"cobblemon.species.eevee.name","species_name":"Évoli","nickname":"","form":"","gender":"female","level":20,"shiny":false,"held":"","held_name":"","held_effect":"","aspects":["female"],"groups":["Terrestre"],"fertility":5,"fertility_max":5,"neutered":false,"ditto":false,"is_ot":true,"ability":"Fuite","nature":"Calme","iv_total":57,"iv_hyper":""},"b":{"uuid":"3b2974c4-43c3-4f0e-b8bb-ec36571a8c3a","species":"cobblemon:ditto","species_key":"cobblemon.species.ditto.name","species_name":"Métamorph","nickname":"","form":"","gender":"genderless","level":30,"shiny":false,"held":"","held_name":"","held_effect":"","aspects":["genderless"],"groups":["Métamorph"],"fertility":5,"fertility_max":5,"neutered":false,"ditto":true,"is_ot":true,"ability":"Échauffement","nature":"Jovial","iv_total":129,"iv_hyper":""},"start":0,"duration":4224000,"pause":"Œuf à récupérer","eggs":[{"species_key":"cobblemon.species.eevee.name","species_name":"Évoli","form":"","shiny":false,"color":15263962}],"eggs_laid":1,"fertility":5,"score":14,"rating":"INCOMPLET","group":"Terrestre","habitat":[{"block":"minecraft:grass_block","count":0,"points":1,"max":12,"total":0},{"block":"minecraft:hay_block","count":2,"points":3,"max":12,"total":6},{"block":"#minecraft:flowers","count":2,"points":2,"max":10,"total":4},{"block":"#minecraft:crops","count":0,"points":2,"max":10,"total":0},{"block":"minecraft:composter","count":1,"points":4,"max":8,"total":4},{"block":"minecraft:dirt_path","count":0,"points":1,"max":6,"total":0}],"notes":"","offspring":"Évoli"}
+[10:45:05] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_04_oeuf_pret
+[10:45:07] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeuf_dans_inventaire
+[10:45:07] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeuf_evoli - {ability_key:"cobblemon.ability.adaptability",ability_name:"Adaptabilité",ball:"cobblemon:poke_ball",ball_key:"item.cobblemon.poke_ball",ball_name:"Poké Ball",color:15263962,cycles:35,egg_moves:[],form:"",form_id:"",gender:"male",hidden:0b,ivs:[I;18,7,17,26,27,14],nature_key:"cobblemon.nature.quiet",nature_minus:"Spe",nature_name:"Discret",nature_plus:"SpA",parents:"Évoli ♀ x Métamorph",shiny:0b,species:"cobblemon:eevee",species_key:"cobblemon.species.eevee.name",species_name:"Évoli",type1:"normal",type2:""}
+[10:45:07] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS infobulle_oeuf - 6/15
+[10:45:08] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_05_infobulle_oeuf
+[10:45:09] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS oeufs_modeles_par_type - 29 modeles distincts pour 29 oeufs
+[10:45:09] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS second_type_en_taches
+[10:45:10] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_05b_oeufs_par_type
+[10:45:12] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] --- ANALYSE DE L'ŒUF EN MAIN ---
+[10:45:12] [Render thread/INFO]: [System] [CHAT] • Espèce : Évoli | Nature : Discret | Poké Ball : Poké Ball
+[10:45:12] [Render thread/INFO]: [System] [CHAT] • Talent : Adaptabilité (Normal) | Shiny : Non | Sexe : ♂ Mâle
+[10:45:12] [Render thread/INFO]: [System] [CHAT] • IVs : PV: 18 | Atk: 7 | Def: 17 | SpA: 26 | SpD: 27 | Spe: 14 (Total: 109/186 - 58.6%)
+[10:45:12] [Render thread/INFO]: [System] [CHAT] • EVs : PV: 0 | Atk: 0 | Def: 0 | SpA: 0 | SpD: 0 | Spe: 0 (Total: 0/510)
+[10:45:12] [Render thread/INFO]: [System] [CHAT] • Egg Moves : aucune
+[10:45:12] [Render thread/INFO]: [System] [CHAT] • Progression Éclosion : 0 / 8,960 pas (0%)
+[10:45:12] [Render thread/INFO]: [System] [CHAT] --------------------------------------------------
+[10:45:13] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS eggsee - [CobbleRanch] --- ANALYSE DE L'ŒUF EN MAIN --- | • Espèce : Évoli | Nature : Discret | Poké Ball : Poké Ball | • Talent : Adaptabilité (Normal) | Shiny : Non | Sexe : ♂ Mâle | • IVs : PV: 18 | Atk: 7 | Def: 17 | SpA: 26 | SpD: 27 | Spe: 14 (Total: 109/186 - 58.6%) | • EVs : PV: 0 | Atk: 0 | Def: 0 | SpA: 0 | SpD: 0 | Spe: 0 (Total: 0/510) | • Egg Moves : aucune | • Progression Éclosion : 0 / 8,960 pas (0%) | --------------------------------------------------
+[10:45:13] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] --- ÉCLOSION DE L'ŒUF EN MAIN ---
+[10:45:13] [Render thread/INFO]: [System] [CHAT] • Espèce : Évoli | Progression : [                    ] 0%
+[10:45:13] [Render thread/INFO]: [System] [CHAT] • Pas restants : 8,960 / 8,960 | Statut : Il faudra encore du temps avant qu'il éclose.
+[10:45:13] [Render thread/INFO]: [System] [CHAT] • Bonus d'éclosion : aucun (Corps Ardent, Armumagma ou Turbine dans l'équipe : ×2.0)
+[10:45:13] [Render thread/INFO]: [System] [CHAT] • Sabliers : Argent ×2 | Or ×2 (clic droit avec le sablier sur l'œuf dans l'inventaire)
+[10:45:13] [Render thread/INFO]: [System] [CHAT] • VIP : /hatch instant fait éclore cet œuf maintenant
+[10:45:13] [Render thread/INFO]: [System] [CHAT] --------------------------------------------------
+[10:45:15] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS hatch_diagnostic - --------------------------------------------------
+[10:45:15] [Render thread/INFO]: [System] [CHAT] Changement de votre propre mode de jeu en Mode Survie
+[10:45:16] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Sablier d'Argent : il reste 6,720 pas.
+[10:45:18] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS sablier_argent_oeuf - 6720.0 < 8960.0
+[10:45:18] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Ton œuf a éclos ! C'est un Évoli !
+[10:45:20] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS eclosion_en_marchant - [CobbleRanch] Ton œuf a éclos ! C'est un Évoli !
+[10:45:20] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pokemon_dans_equipe - 0 -> 1
+[10:45:20] [Render thread/INFO]: [System] [CHAT] Changement de votre propre mode de jeu en Mode Créatif
+[10:45:20] [Render thread/INFO]: [System] [CHAT] RanchTest a reçu Évoli.
+[10:45:20] [Render thread/INFO]: [System] [CHAT] RanchTest a reçu Évoli.
+[10:45:23] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ ---
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Parent 2 : Évoli ♀ (Nv. 15) | Groupes : Terrestre
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Parent 3 : Évoli ♂ (Nv. 15) | Groupes : Terrestre
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Résultat : COMPATIBLE ✔ (Terrestre)
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Œuf : Évoli
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Génétique : 3 IV transmis | nature aléatoire | talent de la mère : 30 % (pas de talent caché)
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Chromatique : 1/8192
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Durée en Pension : 20m 00s (habitat optimal) à 1h 30m 00s | à distance : 1h 00m 00s
+[10:45:23] [Render thread/INFO]: [System] [CHAT] --------------------------------------------------
+[10:45:23] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] VIP : /breed 2 3 lancer pour démarrer la reproduction à distance.
+[10:45:23] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS breed_analyse - [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ --- | • Parent 2 : Évoli ♀ (Nv. 15) | Groupes : Terrestre | • Parent 3 : Évoli ♂ (Nv. 15) | Groupes : Terrestre | • Résultat : COMPATIBLE ✔ (Terrestre) | • Œuf : Évoli | • Génétique : 3 IV transmis | nature aléatoire | talent de la mère : 30 % (pas de talent caché) | • Chromatique : 1/8192 | • Durée en Pension : 20m 00s (habitat optimal) à 1h 30m 00s | à distance : 1h 00m 00s | -------------------------------------------------- | [CobbleRanch] VIP : /breed 2 3 lancer pour démarrer la reproduction à distance.
+[10:45:23] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ ---
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Parent 2 : Évoli ♀ (Nv. 15) | Groupes : Terrestre
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Parent 3 : Évoli ♂ (Nv. 15) | Groupes : Terrestre
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Résultat : COMPATIBLE ✔ (Terrestre)
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Œuf : Évoli
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Génétique : 3 IV transmis | nature aléatoire | talent de la mère : 30 % (pas de talent caché)
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Chromatique : 1/8192
+[10:45:23] [Render thread/INFO]: [System] [CHAT] • Durée en Pension : 20m 00s (habitat optimal) à 1h 30m 00s | à distance : 1h 00m 00s
+[10:45:23] [Render thread/INFO]: [System] [CHAT] --------------------------------------------------
+[10:45:23] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Reproduction à distance lancée (emplacement 1) : premier œuf dans 1h 00m 00s. Suivi et récupération : /daycare.
+[10:45:25] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS breed_a_distance_vip - [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ --- | • Parent 2 : Évoli ♀ (Nv. 15) | Groupes : Terrestre | • Parent 3 : Évoli ♂ (Nv. 15) | Groupes : Terrestre | • Résultat : COMPATIBLE ✔ (Terrestre) | • Œuf : Évoli | • Génétique : 3 IV transmis | nature aléatoire | talent de la mère : 30 % (pas de talent caché) | • Chromatique : 1/8192 | • Durée en Pension : 20m 00s (habitat optimal) à 1h 30m 00s | à distance : 1h 00m 00s | -------------------------------------------------- | [CobbleRanch] Reproduction à distance lancée (emplacement 1) : premier œuf dans 1h 00m 00s. Suivi et récupération : /daycare.
+[10:45:26] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS daycare_ecran - 2
+[10:45:26] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_06_daycare
+[10:45:27] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Castrer Évoli ♂ ? C'est DÉFINITIF : il ne pourra plus jamais se reproduire, et ce sera visible au GTS. Tape /castrer 1 confirmer pour confirmer.
+[10:45:28] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS castrer_demande_confirmation - [CobbleRanch] Castrer Évoli ♂ ? C'est DÉFINITIF : il ne pourra plus jamais se reproduire, et ce sera visible au GTS. Tape /castrer 1 confirmer pour confirmer.
+[10:45:28] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Évoli ♂ est maintenant castré.
+[10:45:29] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS castrer_dresseur_origine - [CobbleRanch] Évoli ♂ est maintenant castré.
+[10:45:29] [Render thread/INFO]: [System] [CHAT] RanchTest a reçu Évoli.
+[10:45:30] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ ---
+[10:45:30] [Render thread/INFO]: [System] [CHAT] • Parent 1 : Évoli ♂ (Nv. 1) | Groupes : Terrestre | CASTRÉ
+[10:45:30] [Render thread/INFO]: [System] [CHAT] • Parent 2 : Évoli ♂ (Nv. 16) | Groupes : Terrestre
+[10:45:30] [Render thread/INFO]: [System] [CHAT] • Résultat : INCOMPATIBLE ✖ — Évoli est castré
+[10:45:30] [Render thread/INFO]: [System] [CHAT] --------------------------------------------------
+[10:45:30] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS castration_visible_breed - [CobbleRanch] --- ANALYSE DE COMPATIBILITÉ --- | • Parent 1 : Évoli ♂ (Nv. 1) | Groupes : Terrestre | CASTRÉ | • Parent 2 : Évoli ♂ (Nv. 16) | Groupes : Terrestre | • Résultat : INCOMPATIBLE ✖ — Évoli est castré | --------------------------------------------------
+[10:45:32] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS guide_ouvert - fr.cobblepulse.ranch.client.GuideScreen@74e50633
+[10:45:32] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_07_guide_mecanique
+[10:45:33] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_08_guide_habitats
+[10:45:35] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_ouvert - 2
+[10:45:35] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_forcer - [filter, sort, search, force:34816f0b-d352-4ae3-83e6-4160dbb21595:0, time:34816f0b-d352-4ae3-83e6-4160dbb21595:0, cancel:34816f0b-d352-4ae3-83e6-4160dbb21595:0, delete:34816f0b-d352-4ae3-83e6-4160dbb21595:0, force:8b957c97-7457-4570-893b-909ebf135638:0, time:8b957c97-7457-4570-893b-909ebf135638:0, cancel:8b957c97-7457-4570-893b-909ebf135638:0, delete:8b957c97-7457-4570-893b-909ebf135638:0, purge_all, restore_all, force_all, ditto, reload, close]
+[10:45:35] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_09_admin
+[10:45:37] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_ponte_forcee - Ponte forcée (RanchTest, emplacement 1)
+[10:45:37] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS admin_ditto_override - Ditto x Ditto : AUTORISÉ
+[10:45:38] [Render thread/INFO]: [System] [CHAT] RanchTest s'est fait téléporter en 3002.500000, 301.000000, 3003.500000
+[10:45:39] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_10_bloc_pension_monde
+[10:45:41] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Œuf de Salamèche ★ donné à RanchTest
+[10:45:43] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pokegive_egg_salameche_chromatique - [CobbleRanch] Œuf de Salamèche ★ donné à RanchTest
+[10:45:43] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Œuf de Artikodin donné à RanchTest
+[10:45:43] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Œuf de Lézargus donné à RanchTest
+[10:45:44] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS pokegive_egg_commandes - 3 oeufs
+[10:45:45] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_11_pokegive_oeufs
+[10:45:46] [Render thread/INFO]: [System] [CHAT] Changement de votre propre mode de jeu en Mode Survie
+[10:45:46] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Equipe : Machop
+[10:45:46] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] 1 × cobblepulse_ranch:silver_bottle_cap donné(s) à RanchTest
+[10:45:46] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] 1 × cobblepulse_ranch:gold_bottle_cap donné(s) à RanchTest
+[10:45:47] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Capsule d'Argent — choisis un Pokémon de ton équipe :
+[10:45:47] [Render thread/INFO]: [System] [CHAT]   [1] Évoli ♂ Niv. 1  Évoli ♂ doit être au niveau 100 pour l'Entraînement Ultime (niveau 1).
+[10:45:47] [Render thread/INFO]: [System] [CHAT]   [2] Évoli ♂ Niv. 16  Évoli ♂ doit être au niveau 100 pour l'Entraînement Ultime (niveau 16).
+[10:45:47] [Render thread/INFO]: [System] [CHAT]   [3] Machoc ♂ Niv. 100  6 stat(s) à entraîner
+[10:45:48] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_menu_equipe -   [3] Machoc ♂ Niv. 100  6 stat(s) à entraîner
+[10:45:49] [Render thread/INFO]: [System] [CHAT] Machoc s'est fait téléporter en 3003.700000, 300.000000, 3003.500000
+[10:45:51] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_clic_droit_ouvre_ecran - CapsuleScreen
+[10:45:51] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_12_capsule_argent_ecran
+[10:45:52] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_bouton_attaque
+[10:45:52] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] ✦ Entraînement Ultime ! Attaque de Machoc ♂ : 31 en combat.
+[10:45:52] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] IV d'origine conservés pour la reproduction : Atk 0.
+[10:45:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_argent_consommee
+[10:45:53] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_ecran_ferme_sans_capsule
+[10:45:53] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] IV base 0/0/0/0/0/0 combat 0/31/0/0/0/0
+[10:45:54] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_argent_attaque_31 - [CobbleRanch] IV base 0/0/0/0/0/0 combat 0/31/0/0/0/0 | client combat 0/31/0/0/0/0
+[10:45:55] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_12b_capsule_argent_chat
+[10:45:57] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_ecran_or
+[10:45:57] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_13_capsule_or_ecran
+[10:45:58] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_bouton_or
+[10:45:58] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] ✦ Entraînement Ultime ! PV, Défense, Attaque Spé., Défense Spé., Vitesse de Machoc ♂ : 31 en combat.
+[10:45:58] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] IV d'origine conservés pour la reproduction : PV 0, Def 0, SpA 0, SpD 0, Spe 0.
+[10:45:59] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_or_consommee
+[10:45:59] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] IV base 0/0/0/0/0/0 combat 31/31/31/31/31/31
+[10:46:00] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_or_toutes_31 - [CobbleRanch] IV base 0/0/0/0/0/0 combat 31/31/31/31/31/31 | client combat 31/31/31/31/31/31
+[10:46:00] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Tiens une Capsule d'Argent ou une Capsule d'Or en main.
+[10:46:01] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS capsule_sans_objet_refusee - [CobbleRanch] Tiens une Capsule d'Argent ou une Capsule d'Or en main.
+[10:46:02] [IO-Worker-1/INFO]: [CobblePulse-Ranch][livetest] capture live_13_capsule_or
+[10:46:03] [Render thread/INFO]: [System] [CHAT] Changement de votre propre mode de jeu en Mode Créatif
+[10:46:03] [Render thread/INFO]: [System] [CHAT] [CobbleRanch] Pension retirée : 2 Pokémon renvoyé(s) au PC, 1 œuf(s) rendu(s).
+[10:46:03] [Render thread/INFO]: [System] [CHAT] Le bloc en 3000, 300, 3000 a été modifié
+[10:46:04] [Render thread/INFO]: [CobblePulse-Ranch][livetest] PASS retrait_rend_les_pokemon - [CobbleRanch] Pension retirée : 2 Pokémon renvoyé(s) au PC, 1 œuf(s) rendu(s). | Le bloc en 3000, 300, 3000 a été modifié
+[10:46:04] [Render thread/INFO]: [CobblePulse-Ranch][livetest] SUMMARY: 51 pass, 0 fail
+[10:46:04] [Render thread/INFO]: Stopping!
